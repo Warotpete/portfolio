@@ -25,7 +25,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-medium transition"
+                className="px-6 py-3 border border-gray-500 hover:border-white rounded-xl font-medium transition"
               >
                 View Projects
               </a>
@@ -75,9 +75,6 @@ export default function Home() {
       <section id="work-experience" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
-            <p className="text-blue-400 uppercase tracking-[0.3em] font-semibold mb-3">
-              Work Experience
-            </p>
             <h2 className="text-4xl md:text-5xl font-bold">Professional Experience</h2>
           </div>
 
@@ -155,44 +152,128 @@ export default function Home() {
       <section id="projects" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
-            <p className="text-blue-400 uppercase tracking-[0.3em] font-semibold mb-3">
-              Projects
-            </p>
             <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Autonomous Driving Car */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
-              <div className="bg-gray-800 h-48 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-gray-500">Project Image</span>
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
+                <img
+                  src="/racing.png"
+                  alt="Autonomous Driving Car Report"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Project Title</h3>
-              <p className="text-gray-400 mb-4">
-                Project description goes here. This is a placeholder for your project details.
+              <h3 className="text-xl font-semibold mb-2">Autonomous Driving Car</h3>
+              <p className="text-gray-300 mb-4">
+                Real-time self-driving system using ROS2 with LiDAR for navigation. Implemented Gap Follow + Automatic Emergency Braking algorithms.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-blue-900 text-blue-200 text-sm rounded-full">
-                  Tech Stack
-                </span>
+              <a
+                href="/autonomous_racing.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                View Report →
+              </a>
+            </article>
+
+            {/* Salus Insurance */}
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
+                <img
+                  src="/salus.jpeg"
+                  alt="Salus Insurance"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="text-blue-400 hover:text-blue-300 font-medium transition"
-                >
-                  View Project
-                </a>
-                <a
-                  href="#"
-                  className="text-blue-400 hover:text-blue-300 font-medium transition"
-                >
-                  GitHub
-                </a>
+              <h3 className="text-xl font-semibold mb-2">Salus Insurance</h3>
+              <p className="text-gray-300 mb-4">
+                Won 1st place at Botnoi HackFest 2023 against 500+ teams. Deployed on Heroku with Omne App integration.
+              </p>
+              <a
+                href="https://github.com/Warotpete/Salus_Frontend"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                GitHub →
+              </a>
+            </article>
+
+            {/* UBCNET */}
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
+                <img
+                  src="https://img.youtube.com/vi/Jg0pPHCoGXA/hqdefault.jpg"
+                  alt="UBCNET Demo"
+                  className="w-full h-full object-cover"
+                />
               </div>
+              <h3 className="text-xl font-semibold mb-2">UBCNET</h3>
+              <p className="text-gray-300 mb-4">
+                Java-based classified platform for UBC community with Shop, Housing, and Announcements sections.
+              </p>
+              <a
+                href="https://youtu.be/Jg0pPHCoGXA?si=v-KsuVNSSosgLGib"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                Watch Demo →
+              </a>
+            </article>
+
+            {/* Platformer Game */}
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
+                <img
+                  src="https://img.youtube.com/vi/33I9vTGCc70/hqdefault.jpg"
+                  alt="Platformer Game"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Platformer Game</h3>
+              <p className="text-gray-300 mb-4">
+                A complete platformer game created from scratch with all aspects handled: coding, animation, game mechanics, and level design.
+              </p>
+              <a
+                href="https://youtu.be/33I9vTGCc70?si=isImxwLTYI4FN8Yj"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                Watch Demo →
+              </a>
             </article>
           </div>
         </div>
       </section>
+
+      <footer className="py-12 px-6 bg-[#08101f] border-t border-white/10">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gray-400 mb-6">© 2026 Warot Tharanamai. All rights reserved.</p>
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://github.com/Warotpete"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-blue-400 transition font-medium"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/warotpete/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-blue-400 transition font-medium"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
