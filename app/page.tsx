@@ -7,14 +7,15 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/95 backdrop-blur border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#" className="text-xl font-bold text-blue-400">
-            Warot
+            Warot Tharanamai
           </a>
           <div className="flex gap-8">
-            <a href="#projects" className="text-gray-300 hover:text-blue-400 transition text-sm">
-              Projects
-            </a>
+            
             <a href="#work-experience" className="text-gray-300 hover:text-blue-400 transition text-sm">
               Experience
+            </a>
+            <a href="#projects" className="text-gray-300 hover:text-blue-400 transition text-sm">
+              Projects
             </a>
             <a href="#skills" className="text-gray-300 hover:text-blue-400 transition text-sm">
               Skills
@@ -36,53 +37,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           
           <div>
-            <p className="text-blue-400 font-medium mb-4">
+            <p className="text-blue-400 font-semibold tracking-wide mb-4 text-base md:text-lg uppercase">
               Hi, I&apos;m
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Warot Tharanamai
             </h1>
 
-            <p className="mt-6 text-lg text-gray-300 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              I'm a Computer Engineering student at the University of British Columbia passionate about machine 
-              learning, autonomous systems, and modern software engineering. I enjoy building real-world 
-              projects that combine AI, robotics, and full-stack development — from self-driving systems 
-              and computer vision models to scalable web applications and cloud infrastructure.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#projects"
-                className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-medium transition"
-              >
-                View Projects
-              </a>
-
-              <a
-                href="#work-experience"
-                className="px-6 py-3 border border-gray-500 hover:border-white rounded-xl font-medium transition"
-              >
-                Work Experience
-              </a>
-
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="px-6 py-3 border border-gray-500 hover:border-white rounded-xl font-medium transition"
-              >
-                View Resume
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/warotpete/"
-                target="_blank"
-                rel="noreferrer"
-                className="px-6 py-3 border border-gray-500 hover:border-white rounded-xl font-medium transition"
-              >
-                LinkedIn
-              </a>
+            <div className="mt-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <p className="text-3xl md:text-4xl font-semibold text-gray-100 leading-tight">
+                4th year Computer Engineering student @ UBC
+              </p>
             </div>
           </div>
 
@@ -101,6 +67,20 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="about" className="py-20 px-6 bg-[#08101f]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold">About Me</h2>
+          </div>
+          <div className="max-w-3xl mx-auto text-gray-300 text-xl md:text-2xl leading-relaxed">
+            <p>
+              I'm a Computer Engineering student at the University of British Columbia passionate about machine learning, autonomous systems, and modern software engineering.
+              I enjoy building real-world projects that combine AI, robotics, and full-stack development — from self-driving systems and computer vision models to scalable web applications and cloud infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="work-experience" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
@@ -108,6 +88,20 @@ export default function Home() {
           </div>
 
           <div className="space-y-10">
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                <div>
+                  <h3 className="text-2xl font-semibold">Incoming Intern | True Corporation · Internship</h3>
+                  <p className="mt-2 text-gray-400">Bangkok · On-site</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-gray-400">May 2026 – Present · 1 mo</p>
+                </div>
+              </div>
+              <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
+                <li>Accepted internship position; starting May 2026 (incoming intern).</li>
+              </ul>
+            </article>
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
@@ -255,14 +249,24 @@ export default function Home() {
                 <span className="px-2 py-1 bg-purple-900/40 text-purple-200 text-xs rounded border border-purple-500/30">Python</span>
                 <span className="px-2 py-1 bg-purple-900/40 text-purple-200 text-xs rounded border border-purple-500/30">LiDAR</span>
               </div>
-              <a
-                href="/autonomous_racing.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition"
-              >
-                View Report →
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="/cpen391_ProjectReport.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  View Report →
+                </a>
+                <a
+                  href="/autonomous_racing.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  View Slides →
+                </a>
+              </div>
             </article>
 
             {/* Salus Insurance */}
@@ -284,14 +288,32 @@ export default function Home() {
                 <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Scikit-learn</span>
                 <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Heroku</span>
               </div>
-              <a
-                href="https://github.com/Warotpete/Salus_Frontend"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition"
-              >
-                GitHub →
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://github.com/Warotpete/Salus_Frontend"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://salus-insurance-e1ca1b74cf92.herokuapp.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  Try the app →
+                </a>
+                <a
+                  href="/Salus.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  View Slides →
+                </a>
+              </div>
             </article>
 
             {/* UBCNET */}
@@ -360,44 +382,36 @@ export default function Home() {
             I'm always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+          <div className="flex justify-center gap-4 mb-12">
             <a
               href="mailto:warot.tharan@gmail.com"
-              className="px-8 py-4 bg-blue-500 hover:bg-blue-600 rounded-xl font-medium transition"
+              aria-label="Send email"
+              className="w-16 h-16 flex items-center justify-center rounded-xl bg-blue-500 hover:bg-blue-600 transition"
             >
-              Send me an Email
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8z"></path>
+              </svg>
             </a>
-            <a
-              href="https://www.linkedin.com/in/warotpete/"
-              target="_blank"
-              rel="noreferrer"
-              className="px-8 py-4 border border-gray-500 hover:border-white rounded-xl font-medium transition"
-            >
-              Connect on LinkedIn
-            </a>
-          </div>
-
-          <div className="flex justify-center gap-8">
             <a
               href="https://github.com/Warotpete"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition text-2xl"
-              title="GitHub"
+              aria-label="View GitHub profile"
+              className="w-16 h-16 flex items-center justify-center rounded-xl border border-gray-500 hover:border-white transition"
             >
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.544 2.914 1.186.092-.923.35-1.544.636-1.9-2.22-.253-4.555-1.112-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.191 20 14.434 20 10.017 20 4.484 15.522 0 10 0z" clipRule="evenodd"></path>
+              <svg className="w-6 h-6 text-gray-300 hover:text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.544 2.914 1.186.092-.923.35-1.544.636-1.9-2.22-.253-4.555-1.112-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.191 20 14.434 20 10.017 20 4.484 15.522 0 10 0z" clipRule="evenodd" />
               </svg>
             </a>
             <a
               href="https://www.linkedin.com/in/warotpete/"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition text-2xl"
-              title="LinkedIn"
+              aria-label="View LinkedIn profile"
+              className="w-16 h-16 flex items-center justify-center rounded-xl border border-gray-500 hover:border-white transition"
             >
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.553-1.554-2.553-1.554 0-1.791 1.213-1.791 2.462v3.269h-2.669V9.309h2.561v1.156h.036c.357-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.168zM5.337 7.433c-.860 0-1.551-.698-1.551-1.554s.691-1.557 1.551-1.557c.859 0 1.551.699 1.551 1.557s-.692 1.554-1.551 1.554zm1.326 8.905H3.99V9.309h2.674v6.029zM17.7 5.009c0 1.193-.977 2.17-2.17 2.17-1.192 0-2.17-.977-2.17-2.17 0-1.192.977-2.17 2.17-2.17 1.193 0 2.17.978 2.17 2.17z"></path>
+              <svg className="w-6 h-6 text-gray-300 hover:text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.553-1.554-2.553-1.554 0-1.791 1.213-1.791 2.462v3.269h-2.669V9.309h2.561v1.156h.036c.357-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.168zM5.337 7.433c-.86 0-1.551-.698-1.551-1.554s.691-1.557 1.551-1.557c.859 0 1.551.699 1.551 1.557s-.692 1.554-1.551 1.554zm1.326 8.905H3.99V9.309h2.674v6.029zM17.7 5.009c0 1.193-.977 2.17-2.17 2.17-1.192 0-2.17-.977-2.17-2.17 0-1.192.977-2.17 2.17-2.17 1.193 0 2.17.978 2.17 2.17z" />
               </svg>
             </a>
           </div>
@@ -406,25 +420,7 @@ export default function Home() {
 
       <footer className="py-12 px-6 bg-[#08101f] border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 mb-6">© 2026 Warot Tharanamai. All rights reserved.</p>
-          <div className="flex justify-center gap-6">
-            <a
-              href="https://github.com/Warotpete"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition font-medium"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/warotpete/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition font-medium"
-            >
-              LinkedIn
-            </a>
-          </div>
+          <p className="text-gray-400">© 2026 Warot Tharanamai. All rights reserved.</p>
         </div>
       </footer>
     </main>
