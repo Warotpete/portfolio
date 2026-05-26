@@ -91,15 +91,15 @@ export default function Home() {
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">Incoming Intern | True Corporation · Internship</h3>
-                  <p className="mt-2 text-gray-400">Bangkok · On-site</p>
+                  <h3 className="text-2xl font-semibold">Incoming Intern</h3>
+                  <p className="mt-2 text-gray-400">True Corporation · Bangkok · On-site</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-gray-400">May 2026 – Present · 1 mo</p>
+                  <p className="text-gray-400">May 2026 – Present</p>
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Accepted internship position; starting May 2026 (incoming intern).</li>
+                <li>Accepted internship position starting May 2026.</li>
               </ul>
             </article>
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
@@ -142,7 +142,7 @@ export default function Home() {
                   <p className="mt-2 text-gray-400">UBC Thai Aiyara Student Club · Vancouver, BC</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-gray-400">Apr. 2024 – Present</p>
+                  <p className="text-gray-400">Apr. 2024 – May. 2026</p>
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
