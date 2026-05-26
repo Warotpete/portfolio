@@ -3,7 +3,36 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0b0f19] text-white">
-      <section className="min-h-screen flex items-center px-6 py-20">
+      {/* Sticky Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/95 backdrop-blur border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="#" className="text-xl font-bold text-blue-400">
+            Warot
+          </a>
+          <div className="flex gap-8">
+            <a href="#projects" className="text-gray-300 hover:text-blue-400 transition text-sm">
+              Projects
+            </a>
+            <a href="#work-experience" className="text-gray-300 hover:text-blue-400 transition text-sm">
+              Experience
+            </a>
+            <a href="#skills" className="text-gray-300 hover:text-blue-400 transition text-sm">
+              Skills
+            </a>
+            <a href="#contact" className="text-gray-300 hover:text-blue-400 transition text-sm">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <section className="min-h-screen flex items-center px-6 py-20 mt-16 relative">
+        {/* Enhanced hero background */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"></div>
+        </div>
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           
           <div>
@@ -11,11 +40,11 @@ export default function Home() {
               Hi, I&apos;m
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Warot Tharanamai
             </h1>
 
-            <p className="mt-6 text-lg text-gray-300 leading-relaxed">
+            <p className="mt-6 text-lg text-gray-300 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               I'm a Computer Engineering student at the University of British Columbia passionate about machine 
               learning, autonomous systems, and modern software engineering. I enjoy building real-world 
               projects that combine AI, robotics, and full-stack development — from self-driving systems 
@@ -25,7 +54,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="px-6 py-3 border border-gray-500 hover:border-white rounded-xl font-medium transition"
+                className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-medium transition"
               >
                 View Projects
               </a>
@@ -57,7 +86,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center animate-fade-in-scale" style={{ animationDelay: "0.4s" }}>
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl">
               <Image
                 src="/profile.jpeg"
@@ -75,7 +104,7 @@ export default function Home() {
       <section id="work-experience" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">Professional Experience</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Work Experience</h2>
           </div>
 
           <div className="space-y-10">
@@ -149,6 +178,58 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="skills" className="py-20 px-6 bg-[#08101f]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold">Skills & Tech Stack</h2>
+            <p className="mt-4 text-gray-400">Languages, frameworks, tools, and platforms I work with</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">C</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Java</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">JavaScript</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">TypeScript</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">AI/ML</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">TensorFlow</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Scikit-learn</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">YOLO</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">LiDAR</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Frameworks</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">React</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Next.js</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Streamlit</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">ROS2</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Tools & Platforms</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Git</span>
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Docker</span>
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Heroku</span>
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
@@ -169,6 +250,11 @@ export default function Home() {
               <p className="text-gray-300 mb-4">
                 Real-time self-driving system using ROS2 with LiDAR for navigation. Implemented Gap Follow + Automatic Emergency Braking algorithms.
               </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-purple-900/40 text-purple-200 text-xs rounded border border-purple-500/30">ROS2</span>
+                <span className="px-2 py-1 bg-purple-900/40 text-purple-200 text-xs rounded border border-purple-500/30">Python</span>
+                <span className="px-2 py-1 bg-purple-900/40 text-purple-200 text-xs rounded border border-purple-500/30">LiDAR</span>
+              </div>
               <a
                 href="/autonomous_racing.pdf"
                 target="_blank"
@@ -192,6 +278,12 @@ export default function Home() {
               <p className="text-gray-300 mb-4">
                 Won 1st place at Botnoi HackFest 2023 against 500+ teams. Deployed on Heroku with Omne App integration.
               </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Python</span>
+                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Streamlit</span>
+                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Scikit-learn</span>
+                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Heroku</span>
+              </div>
               <a
                 href="https://github.com/Warotpete/Salus_Frontend"
                 target="_blank"
@@ -215,6 +307,11 @@ export default function Home() {
               <p className="text-gray-300 mb-4">
                 Java-based classified platform for UBC community with Shop, Housing, and Announcements sections.
               </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Java</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Full-Stack</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Database</span>
+              </div>
               <a
                 href="https://youtu.be/Jg0pPHCoGXA?si=v-KsuVNSSosgLGib"
                 target="_blank"
@@ -238,6 +335,11 @@ export default function Home() {
               <p className="text-gray-300 mb-4">
                 A complete platformer game created from scratch with all aspects handled: coding, animation, game mechanics, and level design.
               </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Game Dev</span>
+                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Animation</span>
+                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Design</span>
+              </div>
               <a
                 href="https://youtu.be/33I9vTGCc70?si=isImxwLTYI4FN8Yj"
                 target="_blank"
@@ -247,6 +349,57 @@ export default function Home() {
                 Watch Demo →
               </a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 px-6 bg-[#0b0f19]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+          <p className="text-lg text-gray-300 mb-12">
+            I'm always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+            <a
+              href="mailto:warot.tharan@gmail.com"
+              className="px-8 py-4 bg-blue-500 hover:bg-blue-600 rounded-xl font-medium transition"
+            >
+              Send me an Email
+            </a>
+            <a
+              href="https://www.linkedin.com/in/warotpete/"
+              target="_blank"
+              rel="noreferrer"
+              className="px-8 py-4 border border-gray-500 hover:border-white rounded-xl font-medium transition"
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
+
+          <div className="flex justify-center gap-8">
+            <a
+              href="https://github.com/Warotpete"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-blue-400 transition text-2xl"
+              title="GitHub"
+            >
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.544 2.914 1.186.092-.923.35-1.544.636-1.9-2.22-.253-4.555-1.112-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.191 20 14.434 20 10.017 20 4.484 15.522 0 10 0z" clipRule="evenodd"></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/warotpete/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-blue-400 transition text-2xl"
+              title="LinkedIn"
+            >
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.553-1.554-2.553-1.554 0-1.791 1.213-1.791 2.462v3.269h-2.669V9.309h2.561v1.156h.036c.357-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.168zM5.337 7.433c-.860 0-1.551-.698-1.551-1.554s.691-1.557 1.551-1.557c.859 0 1.551.699 1.551 1.557s-.692 1.554-1.551 1.554zm1.326 8.905H3.99V9.309h2.674v6.029zM17.7 5.009c0 1.193-.977 2.17-2.17 2.17-1.192 0-2.17-.977-2.17-2.17 0-1.192.977-2.17 2.17-2.17 1.193 0 2.17.978 2.17 2.17z"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
