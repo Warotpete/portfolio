@@ -115,6 +115,36 @@ export default function Projects() {
               <p className="text-sm text-gray-500 mt-4">Team of 5</p>
             </div>
 
+            {/* Sport Session Tracker */}
+            <div className="bg-gray-900 rounded-xl p-6 hover:bg-gray-800 transition border border-gray-700">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
+                <img
+                  src="/sportsession.png"
+                  alt="Sport Session Tracker"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Sport Session Tracker</h3>
+              <p className="text-gray-400 mb-4">
+                Developed a full-stack athletic performance analysis web application using Node.js, Express, and Oracle Database for CPSC 304 at UBC. The system enables athletes to track training sessions, monitor physical conditions, manage sports data, and analyze performance trends through advanced SQL operations including joins, aggregations, and dynamic queries.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 bg-blue-900 text-blue-200 text-sm rounded-full">Node.js</span>
+                <span className="px-3 py-1 bg-blue-900 text-blue-200 text-sm rounded-full">Express</span>
+                <span className="px-3 py-1 bg-blue-900 text-blue-200 text-sm rounded-full">Oracle</span>
+                <span className="px-3 py-1 bg-blue-900 text-blue-200 text-sm rounded-full">SQL</span>
+              </div>
+              <a
+                href="https://github.com/Warotpete/Sport-Sessions-Tracker"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                GitHub →
+              </a>
+              <p className="text-sm text-gray-500 mt-4">CPSC 304 @ UBC</p>
+            </div>
+
             {/* Platformer Game */}
             <div className="bg-gray-900 rounded-xl p-6 hover:bg-gray-800 transition border border-gray-700">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">

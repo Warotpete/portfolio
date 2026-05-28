@@ -17,7 +17,7 @@ export default function Home() {
           
           <div>
             <p className="text-blue-400 font-semibold tracking-wide mb-4 text-base md:text-lg uppercase">
-              Hi, I&apos;m
+              Hello, I&apos;m
             </p>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
@@ -254,6 +254,65 @@ export default function Home() {
               </div>
             </article>
 
+            {/* Platformer Game */}
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
+                <img
+                  src="https://img.youtube.com/vi/33I9vTGCc70/hqdefault.jpg"
+                  alt="Platformer Game"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Platformer Game</h3>
+              <p className="text-gray-300 mb-4">
+                A complete platformer game created from scratch with all aspects handled: coding, animation, game mechanics, and level design.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Game Dev</span>
+                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Animation</span>
+                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Design</span>
+              </div>
+              <a
+                href="https://youtu.be/33I9vTGCc70?si=isImxwLTYI4FN8Yj"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                Watch Demo →
+              </a>
+            </article>
+
+            {/* Sport Session Tracker */}
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
+                <img
+                  src="/sportsession.png"
+                  alt="Sport Session Tracker"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Sport Session Tracker</h3>
+              <p className="text-gray-300 mb-4">
+                In a team of 3, developed a full-stack athletic performance analysis web application using Node.js, Express, and Oracle Database. 
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Node.js</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Express</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Oracle</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">SQL</span>
+              </div>
+              <a
+                href="https://github.com/Warotpete/Sport-Sessions-Tracker"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition"
+              >
+                GitHub →
+              </a>
+            </article>
+
+            
+
             {/* UBCNET */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
@@ -291,34 +350,6 @@ export default function Home() {
                 </a>
                 
               </div>
-            </article>
-
-            {/* Platformer Game */}
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
-              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
-                <img
-                  src="https://img.youtube.com/vi/33I9vTGCc70/hqdefault.jpg"
-                  alt="Platformer Game"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Platformer Game</h3>
-              <p className="text-gray-300 mb-4">
-                A complete platformer game created from scratch with all aspects handled: coding, animation, game mechanics, and level design.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Game Dev</span>
-                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Animation</span>
-                <span className="px-2 py-1 bg-orange-900/40 text-orange-200 text-xs rounded border border-orange-500/30">Design</span>
-              </div>
-              <a
-                href="https://youtu.be/33I9vTGCc70?si=isImxwLTYI4FN8Yj"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition"
-              >
-                Watch Demo →
-              </a>
             </article>
           </div>
         </div>
