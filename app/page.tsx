@@ -169,7 +169,7 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Autonomous Driving Car</h3>
+              <h3 className="text-xl font-semibold mb-2">Autonomous Racing</h3>
               <p className="text-gray-300 mb-4">
                 Real-time self-driving system using ROS2 with LiDAR for navigation. Implemented Gap Follow + Automatic Emergency Braking algorithms.
               </p>
@@ -179,6 +179,14 @@ export default function Home() {
                 <span className="px-2 py-1 bg-purple-900/40 text-purple-200 text-xs rounded border border-purple-500/30">LiDAR</span>
               </div>
               <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://github.com/Warotpete/Autonomous-Racing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  GitHub →
+                </a>
                 <a
                   href="/cpen391_ProjectReport.pdf"
                   target="_blank"
@@ -195,6 +203,7 @@ export default function Home() {
                 >
                   View Slides →
                 </a>
+                
               </div>
             </article>
 
@@ -263,14 +272,25 @@ export default function Home() {
                 <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Full-Stack</span>
                 <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Database</span>
               </div>
-              <a
-                href="https://youtu.be/Jg0pPHCoGXA?si=v-KsuVNSSosgLGib"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition"
-              >
-                Watch Demo →
-              </a>
+              <div className="flex flex-wrap gap-4 mb-4">
+                <a
+                  href="https://github.com/Warotpete/UBCNet"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://youtu.be/Jg0pPHCoGXA?si=v-KsuVNSSosgLGib"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  Watch Demo →
+                </a>
+                
+              </div>
             </article>
 
             {/* Platformer Game */}
@@ -304,7 +324,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="py-20 px-6 bg-[#08101f]">
+    <section id="skills" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold">Skills & Tech Stack</h2>

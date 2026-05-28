@@ -25,14 +25,24 @@ export default function Projects() {
               <p className="text-gray-400 mb-4">
                 Built a real-time self-driving system using ROS2 with LiDAR for navigation in simulated and physical environments. Implemented driving and safety algorithms (Gap Follow + Automatic Emergency Braking) and a track mapping pipeline with occupancy maps.
               </p>
-              <a
-                href="/autonomous_racing.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition"
-              >
-                View Report →
-              </a>
+              <div className="flex flex-wrap gap-4 mb-4">
+                <a
+                  href="/autonomous_racing.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  View Report →
+                </a>
+                <a
+                  href="https://github.com/Warotpete/Autonomous-Racing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  GitHub →
+                </a>
+              </div>
               <p className="text-sm text-gray-500 mt-4">Team of 5</p>
             </div>
 
@@ -84,14 +94,24 @@ export default function Projects() {
                   Web
                 </span>
               </div>
-              <a
-                href="https://youtu.be/Jg0pPHCoGXA?si=v-KsuVNSSosgLGib"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition"
-              >
-                Watch Demo →
-              </a>
+              <div className="flex flex-wrap gap-4 items-center">
+                <a
+                  href="https://youtu.be/Jg0pPHCoGXA?si=v-KsuVNSSosgLGib"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  Watch Demo →
+                </a>
+                <a
+                  href="https://github.com/Warotpete/UBCNet"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-medium transition"
+                >
+                  GitHub →
+                </a>
+              </div>
               <p className="text-sm text-gray-500 mt-4">Team of 5</p>
             </div>
 
