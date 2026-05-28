@@ -1,31 +1,10 @@
 import Image from "next/image";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0b0f19] text-white">
-      {/* Sticky Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/95 backdrop-blur border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="text-xl font-bold text-blue-400">
-            Warot Tharanamai
-          </a>
-          <div className="flex gap-8">
-            
-            <a href="#work-experience" className="text-gray-300 hover:text-blue-400 transition text-sm">
-              Experience
-            </a>
-            <a href="#projects" className="text-gray-300 hover:text-blue-400 transition text-sm">
-              Projects
-            </a>
-            <a href="#skills" className="text-gray-300 hover:text-blue-400 transition text-sm">
-              Skills
-            </a>
-            <a href="#contact" className="text-gray-300 hover:text-blue-400 transition text-sm">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <section className="min-h-screen flex items-center px-6 py-20 mt-16 relative">
         {/* Enhanced hero background */}
@@ -92,7 +71,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <h3 className="text-2xl font-semibold">Incoming Intern</h3>
-                  <p className="mt-2 text-gray-400">True Corporation · Bangkok · On-site</p>
+                  <p className="mt-2 text-gray-400">True Corporation · Bangkok, Thailand</p>
                 </div>
                 <div className="text-right">
                   <p className="text-gray-400">May 2026 – Present</p>
@@ -172,57 +151,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="py-20 px-6 bg-[#08101f]">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">Skills & Tech Stack</h2>
-            <p className="mt-4 text-gray-400">Languages, frameworks, tools, and platforms I work with</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">C</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Java</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">TypeScript</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">AI/ML</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">TensorFlow</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Scikit-learn</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">YOLO</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">LiDAR</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">Frameworks</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">React</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Next.js</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Streamlit</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">ROS2</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">Tools & Platforms</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Git</span>
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Docker</span>
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Heroku</span>
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">AWS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section id="projects" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
@@ -371,6 +300,58 @@ export default function Home() {
                 Watch Demo →
               </a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="py-20 px-6 bg-[#08101f]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold">Skills & Tech Stack</h2>
+            <p className="mt-4 text-gray-400">Languages, frameworks, tools, and platforms I work with</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">C</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Java</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">JavaScript</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">TypeScript</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">AI/ML</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">TensorFlow</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Scikit-learn</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">YOLO</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">LiDAR</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Frameworks</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">React</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Next.js</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Streamlit</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">ROS2</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Tools & Platforms</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Git</span>
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Docker</span>
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Heroku</span>
+                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">AWS</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
