@@ -28,6 +28,38 @@ export default function Home() {
               <p className="text-3xl md:text-4xl font-semibold text-gray-100 leading-tight">
                 4th year Computer Engineering student @ UBC
               </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl bg-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-400"
+                >
+                  Resume
+                </a>
+                <a
+                  href="https://github.com/Warotpete"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10"
+                  aria-label="GitHub profile"
+                >
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.263.82-.583 0-.288-.01-1.05-.015-2.06-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.808 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.333-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.53 11.53 0 013.003-.404c1.018.005 2.044.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.244 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.815 1.102.815 2.222 0 1.606-.015 2.896-.015 3.286 0 .323.216.697.825.58C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/warotpete/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10"
+                  aria-label="LinkedIn profile"
+                >
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452H16.89v-5.568c0-1.328-.025-3.037-1.853-3.037-1.855 0-2.139 1.446-2.139 2.94v5.665H9.256V9H12.7v1.561h.05c.47-.888 1.62-1.823 3.333-1.823 3.563 0 4.22 2.346 4.22 5.396v6.318zM5.337 7.433a1.766 1.766 0 110-3.532 1.766 1.766 0 010 3.532zM7.119 20.452H3.551V9h3.568v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.543C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.27V1.727C24 .774 23.2 0 22.225 0z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -78,7 +110,7 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Accepted internship position starting May 2026.</li>
+                <li>Accepted 3 months internship position starting May 2026.</li>
               </ul>
             </article>
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
