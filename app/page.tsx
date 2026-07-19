@@ -85,8 +85,8 @@ export default function Home() {
           </div>
           <div className="max-w-3xl mx-auto text-gray-300 text-xl md:text-2xl leading-relaxed">
             <p>
-              I'm a Computer Engineering student at the University of British Columbia passionate about machine learning, autonomous systems, and modern software engineering.
-              I enjoy building real-world projects that combine AI, robotics, and full-stack development — from self-driving systems and computer vision models to scalable web applications and cloud infrastructure.
+              I&apos;m a Computer Engineering student at the University of British Columbia passionate about machine learning, autonomous systems, and modern software engineering.
+              I enjoy building real-world projects that combine AI, robotics, and full-stack development — from self-driving systems and computer vision models to scalable web applications and cloud infrastructure. I&apos;m also interested in finance, business strategy, and technology-driven innovation, and I explore these interests by competing in case competitions that challenge me to connect technical ideas with real business opportunities.
             </p>
           </div>
         </div>
@@ -102,15 +102,17 @@ export default function Home() {
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">Incoming Intern</h3>
-                  <p className="mt-2 text-gray-400">True Corporation · Bangkok, Thailand</p>
+                  <h3 className="text-2xl font-semibold">Technology Innovation Intern – True Alpha Program</h3>
+                  <p className="mt-2 text-gray-400">True Corporation · Internship · Bangkok, Thailand · On-site</p>
                 </div>
                 <div className="text-right">
                   <p className="text-gray-400">May 2026 – Present</p>
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Accepted 3 months internship position starting May 2026.</li>
+                <li>Selected for True&apos;s flagship innovation internship program, working in a startup-style environment to identify business opportunities and develop technology-driven solutions for real-world challenges.</li>
+                <li>Collaborated with mentors, business stakeholders, and cross-functional teams to gather requirements, analyze business needs, and design and develop a Proof of Concept (POC) from ideation through implementation.</li>
+                <li>Applied software development, data analysis, and AI technologies to evaluate processes, generate insights, and propose digital solutions within the telecommunications and digital services ecosystem.</li>
               </ul>
             </article>
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
@@ -183,7 +185,52 @@ export default function Home() {
         </div>
       </section>
 
-      
+      <section id="competitions" className="py-20 px-6 bg-[#0b0f19]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Awards &amp; Competitions</p>
+            <h2 className="text-4xl md:text-5xl font-bold">Competitions</h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
+              <div className="relative flex h-56 items-center justify-center overflow-hidden bg-gradient-to-br from-[#071d56] via-[#153da0] to-[#57c9f2] p-6 text-center">
+                <div className="absolute -left-12 -top-16 h-48 w-48 rounded-full bg-pink-400/40 blur-3xl" />
+                <div className="absolute -bottom-16 -right-10 h-52 w-52 rounded-full bg-yellow-300/30 blur-3xl" />
+                <div className="relative rounded-2xl border border-white/30 bg-white/90 px-8 py-6 text-[#17224c] shadow-2xl">
+                  <p className="text-sm font-bold tracking-widest">P&amp;G · PANTENE MIRACLES</p>
+                  <p className="mt-2 text-xl font-black uppercase leading-tight">Samaggi x ATSA<br />Case Competition 2026</p>
+                </div>
+              </div>
+              <div className="p-7">
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-2xl font-semibold">Pantene Miracles Case Competition</h3>
+                  <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-200">Winner · 2026</span>
+                </div>
+                <p className="mb-5 text-gray-300">Developed and presented a winning strategy for the Pantene Miracles business case at the Samaggi x ATSA Case Competition in Bangkok.</p>
+                <a href="/pantene-miracles-case-competition.pdf" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">View case deck →</a>
+              </div>
+            </article>
+
+            <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
+              <div className="relative h-56 overflow-hidden bg-gray-800">
+                <Image src="/salus.jpeg" alt="Salus Insurance at Botnoi HackFest 2023" fill className="object-cover transition duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-7">
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-2xl font-semibold">Botnoi HackFest</h3>
+                  <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-200">1st Place · 2023</span>
+                </div>
+                <p className="mb-5 text-gray-300">Built Salus Insurance and won first place against more than 500 teams, with a Streamlit app deployed on Heroku and integrated with Omne.</p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="https://github.com/Warotpete/Salus_Frontend" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">GitHub →</a>
+                  <a href="/Salus.pdf" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">View slides →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <section id="projects" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
@@ -236,53 +283,6 @@ export default function Home() {
                   View Slides →
                 </a>
                 
-              </div>
-            </article>
-
-            {/* Salus Insurance */}
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
-              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
-                <img
-                  src="/salus.jpeg"
-                  alt="Salus Insurance"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Salus Insurance</h3>
-              <p className="text-gray-300 mb-4">
-                Won 1st place at Botnoi HackFest 2023 against 500+ teams. Deployed on Heroku with Omne App integration.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Python</span>
-                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Streamlit</span>
-                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Scikit-learn</span>
-                <span className="px-2 py-1 bg-green-900/40 text-green-200 text-xs rounded border border-green-500/30">Heroku</span>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://github.com/Warotpete/Salus_Frontend"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-medium transition"
-                >
-                  GitHub →
-                </a>
-                <a
-                  href="https://salus-insurance-e1ca1b74cf92.herokuapp.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-medium transition"
-                >
-                  Try the app →
-                </a>
-                <a
-                  href="/Salus.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-medium transition"
-                >
-                  View Slides →
-                </a>
               </div>
             </article>
 
