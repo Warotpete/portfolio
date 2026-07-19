@@ -3,29 +3,29 @@ import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0b0f19] text-white">
+    <main className="portfolio-shell min-h-screen bg-[#fffdf8] text-slate-900">
       <Navbar />
 
-      <section className="min-h-screen flex items-center px-6 py-20 mt-16 relative">
+      <section className="relative flex min-h-screen items-center px-6 pb-20 pt-32">
         {/* Enhanced hero background */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr]">
           
           <div>
             <p className="text-blue-400 font-semibold tracking-wide mb-4 text-base md:text-lg uppercase">
               Hello, I&apos;m
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="animate-fade-in-up text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl" style={{ animationDelay: "0.1s" }}>
               Warot Tharanamai
             </h1>
 
             <div className="mt-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <p className="text-3xl md:text-4xl font-semibold text-gray-100 leading-tight">
+              <p className="max-w-2xl text-2xl font-medium leading-snug text-gray-100 md:text-3xl">
                 4th year Computer Engineering student @ UBC
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -41,7 +41,7 @@ export default function Home() {
                   href="https://github.com/Warotpete"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-3 text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-700"
                   aria-label="GitHub profile"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -52,7 +52,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/warotpete/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-3 text-white transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-3 text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-700"
                   aria-label="LinkedIn profile"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -80,10 +80,11 @@ export default function Home() {
 
       <section id="about" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">About Me</h2>
+          <div className="section-heading mb-10">
+            <p className="section-kicker">Introduction</p>
+            <h2 className="text-3xl font-bold md:text-4xl">About Me</h2>
           </div>
-          <div className="max-w-3xl mx-auto text-gray-300 text-xl md:text-2xl leading-relaxed">
+          <div className="max-w-4xl text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
             <p>
               I&apos;m a Computer Engineering student at the University of British Columbia passionate about machine learning, autonomous systems, and modern software engineering.
               I enjoy building real-world projects that combine AI, robotics, and full-stack development — from self-driving systems and computer vision models to scalable web applications and cloud infrastructure. I&apos;m also interested in finance, business strategy, and technology-driven innovation, and I explore these interests by competing in case competitions that challenge me to connect technical ideas with real business opportunities.
@@ -94,11 +95,12 @@ export default function Home() {
 
       <section id="work-experience" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">Work Experience</h2>
+          <div className="section-heading mb-10">
+            <p className="section-kicker">My journey</p>
+            <h2 className="text-3xl font-bold md:text-4xl">Work Experience</h2>
           </div>
 
-          <div className="space-y-10">
+          <div className="space-y-5">
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
@@ -110,9 +112,8 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Selected for True&apos;s flagship innovation internship program, working in a startup-style environment to identify business opportunities and develop technology-driven solutions for real-world challenges.</li>
-                <li>Collaborated with mentors, business stakeholders, and cross-functional teams to gather requirements, analyze business needs, and design and develop a Proof of Concept (POC) from ideation through implementation.</li>
-                <li>Applied software development, data analysis, and AI technologies to evaluate processes, generate insights, and propose digital solutions within the telecommunications and digital services ecosystem.</li>
+                <li>Selected for True&apos;s flagship innovation program to develop technology-driven solutions for real business challenges.</li>
+                <li>Worked with cross-functional teams to take an AI and data-focused proof of concept from idea to implementation.</li>
               </ul>
             </article>
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
@@ -126,9 +127,8 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Worked as part of a teaching team supporting over 700 students in the Introduction to Programming in C course.</li>
-                <li>Conducted weekly lab sessions and delivered presentations and demonstrations to explain programming logic, algorithms, debugging techniques, and computational design applications.</li>
-                <li>Graded programming assignments, quizzes, and exams with feedback to support continuous learning.</li>
+                <li>Supported more than 700 students learning programming fundamentals in C.</li>
+                <li>Led weekly labs, explained algorithms and debugging, and provided feedback on assessments.</li>
               </ul>
             </article>
 
@@ -143,8 +143,8 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Developed a computer vision model using YOLO architecture to automatically detect and count steel pipes from drone footage of warehouse yards, enabling more efficient inventory monitoring.</li>
-                <li>Prepared and annotated custom datasets, optimized model training pipelines, and fine-tuned hyperparameters for improved detection accuracy.</li>
+                <li>Built a YOLO computer vision model to count steel pipes from warehouse drone footage.</li>
+                <li>Prepared datasets and optimized training pipelines to improve detection accuracy.</li>
               </ul>
             </article>
 
@@ -159,9 +159,8 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Led executive team in planning and executing club events that promote Thai culture within the UBC community.</li>
-                <li>Facilitated regular meetings to align team goals, monitor progress, and foster collaboration among departments.</li>
-                <li>Designed graphics, posters, and promotional materials; managed social media content across Instagram, Facebook, and Line.</li>
+                <li>Led the executive team in delivering events that promoted Thai culture at UBC.</li>
+                <li>Directed team planning and created promotional content across social platforms.</li>
               </ul>
             </article>
 
@@ -176,9 +175,8 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Developed precise 3D CAD models for various projects; collaborated with team members and external stakeholders to deliver customized design solutions.</li>
-                <li>Created rapid prototypes to test and validate design concepts, contributing to an iterative design process.</li>
-                <li>Diagnosed and resolved technical issues related to 3D printing processes, ensuring smooth production workflows.</li>
+                <li>Designed custom 3D CAD models and rapid prototypes for internal and external projects.</li>
+                <li>Tested designs and resolved 3D-printing issues throughout the production process.</li>
               </ul>
             </article>
           </div>
@@ -187,9 +185,9 @@ export default function Home() {
 
       <section id="competitions" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Awards &amp; Competitions</p>
-            <h2 className="text-4xl md:text-5xl font-bold">Competitions</h2>
+          <div className="section-heading mb-10">
+            <p className="section-kicker">Awards &amp; recognition</p>
+            <h2 className="text-3xl font-bold md:text-4xl">Competitions</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -205,7 +203,7 @@ export default function Home() {
               <div className="p-7">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-2xl font-semibold">Pantene Miracles Case Competition</h3>
-                  <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-200">Winner · 2026</span>
+                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">Winner · 2026</span>
                 </div>
                 <p className="mb-5 text-gray-300">Developed and presented a winning strategy for the Pantene Miracles business case at the Samaggi x ATSA Case Competition in Bangkok.</p>
                 <a href="/pantene-miracles-case-competition.pdf" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">View case deck →</a>
@@ -219,7 +217,7 @@ export default function Home() {
               <div className="p-7">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-2xl font-semibold">Botnoi HackFest</h3>
-                  <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-200">1st Place · 2023</span>
+                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">1st Place · 2023</span>
                 </div>
                 <p className="mb-5 text-gray-300">Built Salus Insurance and won first place against more than 500 teams, with a Streamlit app deployed on Heroku and integrated with Omne.</p>
                 <div className="flex flex-wrap gap-4">
@@ -234,11 +232,12 @@ export default function Home() {
 
       <section id="projects" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">Featured Projects</h2>
+          <div className="section-heading mb-10">
+            <p className="section-kicker">Selected work</p>
+            <h2 className="text-3xl font-bold md:text-4xl">Featured Projects</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-2">
             {/* Autonomous Driving Car */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
@@ -387,14 +386,15 @@ export default function Home() {
         </div>
       </section>
 
-    <section id="skills" className="py-20 px-6 bg-[#08101f]">
+    <section id="skills" className="hidden py-20 px-6 bg-[#08101f]" aria-hidden="true">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">Skills & Tech Stack</h2>
-            <p className="mt-4 text-gray-400">Languages, frameworks, tools, and platforms I work with</p>
+          <div className="section-heading mb-10">
+            <p className="section-kicker">What I work with</p>
+            <h2 className="text-3xl font-bold md:text-4xl">Skills &amp; Tech Stack</h2>
+            <p className="mt-3 text-gray-400">Languages, frameworks, tools, and platforms I use to bring ideas to life.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="text-lg font-semibold mb-4 text-blue-400">Languages</h3>
               <div className="flex flex-wrap gap-2">
@@ -441,7 +441,8 @@ export default function Home() {
 
       <section id="contact" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+          <p className="section-kicker">Contact</p>
+          <h2 className="mb-5 text-3xl font-bold md:text-4xl">Let&apos;s build something meaningful.</h2>
           <p className="text-lg text-gray-300 mb-12">
             I'm always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
           </p>
@@ -461,9 +462,9 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
               aria-label="View GitHub profile"
-              className="w-16 h-16 flex items-center justify-center rounded-xl border border-gray-500 hover:border-white transition"
+              className="w-16 h-16 flex items-center justify-center rounded-xl border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:border-blue-300 hover:text-blue-700"
             >
-              <svg className="w-6 h-6 text-gray-300 hover:text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.544 2.914 1.186.092-.923.35-1.544.636-1.9-2.22-.253-4.555-1.112-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.191 20 14.434 20 10.017 20 4.484 15.522 0 10 0z" clipRule="evenodd" />
               </svg>
             </a>
@@ -472,9 +473,9 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
               aria-label="View LinkedIn profile"
-              className="w-16 h-16 flex items-center justify-center rounded-xl border border-gray-500 hover:border-white transition"
+              className="w-16 h-16 flex items-center justify-center rounded-xl border border-slate-300 bg-white text-slate-700 shadow-sm transition hover:border-blue-300 hover:text-blue-700"
             >
-              <svg className="w-6 h-6 text-gray-300 hover:text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.553-1.554-2.553-1.554 0-1.791 1.213-1.791 2.462v3.269h-2.669V9.309h2.561v1.156h.036c.357-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.168zM5.337 7.433c-.86 0-1.551-.698-1.551-1.554s.691-1.557 1.551-1.557c.859 0 1.551.699 1.551 1.557s-.692 1.554-1.551 1.554zm1.326 8.905H3.99V9.309h2.674v6.029zM17.7 5.009c0 1.193-.977 2.17-2.17 2.17-1.192 0-2.17-.977-2.17-2.17 0-1.192.977-2.17 2.17-2.17 1.193 0 2.17.978 2.17 2.17z" />
               </svg>
             </a>

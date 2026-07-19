@@ -56,5 +56,165 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.portfolio-shell {
+  background:
+    radial-gradient(circle at 8% 4%, rgba(112, 164, 255, 0.17), transparent 25rem),
+    #fffdf8;
+  color: #172033;
+}
+
+.portfolio-shell > section {
+  background-color: transparent;
+}
+
+.portfolio-shell > section:nth-of-type(even) {
+  background-color: #f4f7fb;
+}
+
+.portfolio-shell h1,
+.portfolio-shell h2,
+.portfolio-shell h3 {
+  color: #14213d;
+  letter-spacing: -0.025em;
+}
+
+.portfolio-shell h2 {
+  text-wrap: balance;
+}
+
+.portfolio-shell .section-heading {
+  max-width: 44rem;
+}
+
+.portfolio-shell .section-kicker {
+  margin-bottom: 0.6rem;
+  color: #2457a7;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.portfolio-shell .text-gray-100 {
+  color: #27364f;
+}
+
+.portfolio-shell .text-gray-200,
+.portfolio-shell .text-gray-300 {
+  color: #475569;
+}
+
+.portfolio-shell .text-gray-400 {
+  color: #64748b;
+}
+
+.portfolio-shell .text-blue-400 {
+  color: #2457a7;
+}
+
+.portfolio-shell .hover\:text-blue-300:hover {
+  color: #173f80;
+}
+
+.portfolio-shell article {
+  border-color: #dbe3ee;
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 38px rgba(42, 59, 86, 0.08);
+}
+
+.portfolio-shell article:hover {
+  border-color: #b9c9de;
+  background-color: #ffffff;
+}
+
+.portfolio-shell #work-experience article {
+  border-left: 4px solid #7aa2de;
+  padding: 1.75rem;
+}
+
+.portfolio-shell #work-experience article h3 {
+  font-size: 1.18rem;
+  line-height: 1.4;
+}
+
+.portfolio-shell #work-experience article .text-right p {
+  display: inline-flex;
+  border-radius: 999px;
+  background: #edf3fb;
+  padding: 0.45rem 0.8rem;
+  color: #315d9c;
+  font-size: 0.82rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.portfolio-shell #work-experience ul {
+  line-height: 1.75;
+}
+
+.portfolio-shell #work-experience li::marker {
+  color: #4778bd;
+}
+
+.portfolio-shell #projects article img {
+  transition: transform 350ms ease;
+}
+
+.portfolio-shell #projects article,
+.portfolio-shell #competitions article {
+  border-radius: 1.5rem;
+}
+
+.portfolio-shell #projects article span {
+  border-color: #aac0df;
+  background: #e6eef9;
+  color: #244c83;
+  font-weight: 650;
+}
+
+.portfolio-shell #projects article a,
+.portfolio-shell #competitions article a {
+  color: #174f9c;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #b8cbe6;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.portfolio-shell #projects article a:hover,
+.portfolio-shell #competitions article a:hover {
+  color: #0f3973;
+  text-decoration-color: #0f3973;
+}
+
+.portfolio-shell #skills .grid > div {
+  border: 1px solid #dbe3ee;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.35rem;
+  box-shadow: 0 10px 28px rgba(42, 59, 86, 0.06);
+}
+
+.portfolio-shell #projects article:hover img {
+  transform: scale(1.035);
+}
+
+.portfolio-shell footer {
+  border-color: #dbe3ee;
+  background: #eef3f9;
+}
+
+@media (max-width: 767px) {
+  .portfolio-shell > section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .portfolio-shell #work-experience article {
+    padding: 1.35rem;
+  }
 }
