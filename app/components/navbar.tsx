@@ -28,7 +28,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#contact" className="ml-1 rounded-lg bg-[#2457a7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#194887]">Let&apos;s talk</a>
+          <a href="#contact" className="ml-1 rounded-lg bg-[#2457a7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#194887]">Contact</a>
         </div>
 
         {/* Hamburger button — mobile only */}
@@ -53,7 +53,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="rounded-xl bg-[#2457a7] px-4 py-3 text-center font-semibold text-white">Let&apos;s talk</a>
+          <a href="#contact" onClick={() => setOpen(false)} className="rounded-xl bg-[#2457a7] px-4 py-3 text-center font-semibold text-white">Contact</a>
         </div>
       )}
     </nav>

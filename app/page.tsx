@@ -192,21 +192,20 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
-              <div className="relative flex h-56 items-center justify-center overflow-hidden bg-gradient-to-br from-[#071d56] via-[#153da0] to-[#57c9f2] p-6 text-center">
-                <div className="absolute -left-12 -top-16 h-48 w-48 rounded-full bg-pink-400/40 blur-3xl" />
-                <div className="absolute -bottom-16 -right-10 h-52 w-52 rounded-full bg-yellow-300/30 blur-3xl" />
-                <div className="relative rounded-2xl border border-white/30 bg-white/90 px-8 py-6 text-[#17224c] shadow-2xl">
-                  <p className="text-sm font-bold tracking-widest">P&amp;G · PANTENE MIRACLES</p>
-                  <p className="mt-2 text-xl font-black uppercase leading-tight">Samaggi x ATSA<br />Case Competition 2026</p>
-                </div>
+              <div className="relative h-56 overflow-hidden bg-gray-100">
+                <Image
+                  src="/pantene-case-competition-winners.png"
+                  alt="Winning team at the P&G Pantene Samaggi x ATSA Case Competition 2026"
+                  fill
+                  className="object-cover object-center transition duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="p-7">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-2xl font-semibold">Pantene Miracles Case Competition</h3>
                   <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">Winner · 2026</span>
                 </div>
-                <p className="mb-5 text-gray-300">Developed and presented a winning strategy for the Pantene Miracles business case at the Samaggi x ATSA Case Competition in Bangkok.</p>
-                <a href="/pantene-miracles-case-competition.pdf" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">View case deck →</a>
+                <p className="text-gray-300">Developed and presented a winning strategy for the Pantene Miracles business case at the Samaggi x ATSA Case Competition in Bangkok.</p>
               </div>
             </article>
 
@@ -217,7 +216,7 @@ export default function Home() {
               <div className="p-7">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-2xl font-semibold">Botnoi HackFest</h3>
-                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">1st Place · 2023</span>
+                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">Winner · 2026</span>
                 </div>
                 <p className="mb-5 text-gray-300">Built Salus Insurance and won first place against more than 500 teams, with a Streamlit app deployed on Heroku and integrated with Omne.</p>
                 <div className="flex flex-wrap gap-4">
@@ -442,7 +441,7 @@ export default function Home() {
       <section id="contact" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-4xl mx-auto text-center">
           <p className="section-kicker">Contact</p>
-          <h2 className="mb-5 text-3xl font-bold md:text-4xl">Let&apos;s build something meaningful.</h2>
+          <h2 className="mb-5 text-3xl font-bold md:text-4xl">Feel free to reach out</h2>
           <p className="text-lg text-gray-300 mb-12">
             I'm always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
           </p>
