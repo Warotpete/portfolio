@@ -144,6 +144,12 @@ body {
   line-height: 1.4;
 }
 
+.portfolio-shell #work-experience article .company {
+  color: #2457a7;
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
 .portfolio-shell #work-experience article .text-right p {
   display: inline-flex;
   border-radius: 999px;
@@ -156,11 +162,202 @@ body {
 }
 
 .portfolio-shell #work-experience ul {
-  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  color: #475569;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+/* Vertical timeline: a line down the left with a dot beside each card */
+.portfolio-shell .timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-left: 2rem;
+}
+
+.portfolio-shell .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.45rem;
+  width: 2px;
+  background: linear-gradient(#b9cdea, #dbe3ee);
+}
+
+.portfolio-shell .timeline > article {
+  position: relative;
+}
+
+.portfolio-shell .timeline > article::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  /* centre on the line; the card's 4px left border shifts its padding box */
+  left: calc(-2rem + 0.45rem + 1px - 6px - 4px);
+  width: 12px;
+  height: 12px;
+  border: 3px solid #2457a7;
+  border-radius: 999px;
+  background: #fffdf8;
+  transition: background-color 250ms ease;
+}
+
+.portfolio-shell .timeline > article:hover::before,
+.portfolio-shell .timeline > article:focus-within::before {
+  background: #2457a7;
+}
+
+.portfolio-shell #work-experience .role + .role {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #dbe3ee;
+}
+
+.portfolio-shell #work-experience .role-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.portfolio-shell #work-experience .role-header h4 {
+  color: #14213d;
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.portfolio-shell #work-experience .role-header span {
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Descriptions stay collapsed until the card is hovered, focused, or tapped */
+.portfolio-shell #work-experience article {
+  cursor: default;
+  outline: none;
+  transition: border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.portfolio-shell #work-experience article:focus-visible {
+  box-shadow: 0 0 0 3px #b9cdea;
+}
+
+.portfolio-shell #work-experience .details {
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 450ms ease, margin-top 400ms ease, opacity 300ms ease;
+}
+
+.portfolio-shell #work-experience article:hover .details,
+.portfolio-shell #work-experience article:focus-within .details {
+  max-height: 40rem;
+  margin-top: 1.25rem;
+  opacity: 1;
+}
+
+.portfolio-shell #work-experience article::after {
+  content: "Hover for details ▾";
+  display: block;
+  max-height: 2rem;
+  margin-top: 0.75rem;
+  color: #7b8aa3;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  transition: max-height 300ms ease, margin-top 300ms ease, opacity 200ms ease;
+}
+
+.portfolio-shell #work-experience article:hover::after,
+.portfolio-shell #work-experience article:focus-within::after {
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+
+/* Touch screens have no hover, so show descriptions there */
+@media (hover: none) {
+  .portfolio-shell #work-experience .details {
+    max-height: none;
+    margin-top: 1.25rem;
+    opacity: 1;
+  }
+
+  .portfolio-shell #work-experience article::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-shell #work-experience .details {
+    transition: none;
+  }
 }
 
 .portfolio-shell #work-experience li::marker {
   color: #4778bd;
+}
+
+.portfolio-shell #business .business-card {
+  border-color: #f0d9b5;
+  background: linear-gradient(135deg, #fffaf1 0%, #ffffff 60%);
+}
+
+.portfolio-shell #business .company {
+  color: #b25e09;
+  font-weight: 650;
+}
+
+.portfolio-shell #business .business-date {
+  border-radius: 999px;
+  background: #fdf0dc;
+  padding: 0.45rem 0.8rem;
+  color: #8a4d0f;
+  font-size: 0.82rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.portfolio-shell #business .business-link {
+  background: #ee4d2d;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(238, 77, 45, 0.22);
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.portfolio-shell #business .business-link:hover {
+  background: #d73211;
+  transform: translateY(-1px);
+}
+
+.portfolio-shell #business .business-label {
+  margin-bottom: 0.9rem;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-shell #business .business-chip {
+  border: 1px solid #ecc9a0;
+  border-radius: 999px;
+  background: #fbf0e3;
+  padding: 0.3rem 0.8rem;
+  color: #8a4d0f;
+  font-size: 0.875rem;
+  font-weight: 650;
 }
 
 .portfolio-shell #projects article img {
@@ -222,6 +419,13 @@ body {
 }
 
 .portfolio-shell #skills .grid > div:nth-child(3) {
+  --skill-accent: #c4761f;
+  --skill-border: #ecc9a0;
+  --skill-bg: #fbf0e3;
+  --skill-text: #8a4d0f;
+}
+
+.portfolio-shell #skills .grid > div:nth-child(4) {
   --skill-accent: #1f9270;
   --skill-border: #a8d8c6;
   --skill-bg: #e5f5ef;

@@ -72,6 +72,7 @@ export default function Home() {
                 src="/profile.jpeg"
                 alt="Warot Tharanamai"
                 fill
+                sizes="(min-width: 768px) 384px, 288px"
                 className="object-cover"
                 priority
               />
@@ -103,71 +104,163 @@ export default function Home() {
             <h2 className="text-3xl font-bold md:text-4xl">Work Experience</h2>
           </div>
 
-          <div className="space-y-5">
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
+          <div className="timeline">
+            <article tabIndex={0} className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <h3 className="text-2xl font-semibold">True Alpha Intern</h3>
-                  <p className="mt-2 text-gray-400">True Corporation · Bangkok, Thailand</p>
+                  <p className="mt-2 text-gray-400"><span className="company">True Corporation</span> · Bangkok, Thailand</p>
                 </div>
                 <div className="text-right">
                   <p className="text-gray-400">May 2026 – July 2026</p>
                 </div>
               </div>
-              <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Analyzed the retail customer journey and stakeholder requirements to identify opportunities for humanoid robots to improve the in-store experience.</li>
-                <li>Worked with cross-functional teams to build a proof of concept, define priority use cases, and present recommendations to business and technical stakeholders.</li>
-                <li>Received the program&apos;s <strong>Winner Award</strong> for proposing a practical humanoid robot solution for retail customer engagement.</li>
-              </ul>
+              <div className="details">
+                <ul>
+                  <li>Selected for True&apos;s flagship innovation internship, working in a startup-style team to find business opportunities and build technology-driven solutions for real challenges in telecom and digital services.</li>
+                  <li>Analyzed the retail customer journey and gathered stakeholder requirements to identify where humanoid robots could improve the in-store experience.</li>
+                  <li>Worked with mentors and cross-functional teams to take a proof of concept from ideation through implementation, define priority use cases, and present recommendations to business and technical stakeholders.</li>
+                  <li>Received the program&apos;s <strong>Winner Award</strong> for proposing a practical humanoid robot solution for retail customer engagement.</li>
+                </ul>
+              </div>
             </article>
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
+
+            <article tabIndex={0} className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <h3 className="text-2xl font-semibold">APSC 160 Undergraduate Teaching Assistant</h3>
-                  <p className="mt-2 text-gray-400">UBC Electrical and Computer Engineering · Vancouver, BC</p>
+                  <p className="mt-2 text-gray-400"><span className="company">UBC Electrical and Computer Engineering</span> · Vancouver, BC</p>
                 </div>
                 <div className="text-right">
                   <p className="text-gray-400">Aug. 2025 – Present</p>
                 </div>
               </div>
-              <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Support more than 700 students learning programming fundamentals in C.</li>
-                <li>Lead weekly labs, explain algorithms and debugging, and provide feedback on assessments.</li>
-              </ul>
+              <div className="details">
+                <ul>
+                  <li>Support more than 700 students in APSC 160, Introduction to Computation in Engineering Design.</li>
+                  <li>Lead weekly lab sessions on C programming, problem-solving, and computational design.</li>
+                  <li>Give presentations and live demonstrations that walk through programming logic, algorithms, and debugging techniques.</li>
+                  <li>Grade programming assignments, quizzes, and exams, with feedback that helps students keep improving.</li>
+                </ul>
+              </div>
             </article>
 
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
+            <article tabIndex={0} className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                   <h3 className="text-2xl font-semibold">Software Engineer Intern, AI/ML</h3>
-                  <p className="mt-2 text-gray-400">Skyller Solutions · Bangkok, Thailand</p>
+                  <p className="mt-2 text-gray-400"><span className="company">Skyller Solutions</span> · Bangkok, Thailand</p>
                 </div>
                 <div className="text-right">
                   <p className="text-gray-400">June 2025 – Aug. 2025</p>
                 </div>
               </div>
-              <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Built a YOLO computer vision model to count steel pipes from warehouse drone footage.</li>
-                <li>Prepared datasets and optimized training pipelines to improve detection accuracy.</li>
-              </ul>
+              <div className="details">
+                <ul>
+                  <li>Developed a YOLO computer vision model that detects and counts steel pipes in drone footage of warehouse yards, making warehouse inventory monitoring more efficient.</li>
+                  <li>Prepared and annotated custom datasets, optimized the training pipeline, and fine-tuned hyperparameters to improve detection accuracy.</li>
+                </ul>
+              </div>
             </article>
 
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
+            <article tabIndex={0} className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">Club President | Promotional Director</h3>
-                  <p className="mt-2 text-gray-400">UBC Thai Aiyara Student Club · Vancouver, BC</p>
+                  <h3 className="text-2xl font-semibold">Co-President · Promotional Director</h3>
+                  <p className="mt-2 text-gray-400"><span className="company">UBC Thai Aiyara Student Club</span> · Vancouver, BC</p>
                 </div>
                 <div className="text-right">
                   <p className="text-gray-400">Apr. 2024 – May 2026</p>
                 </div>
               </div>
-              <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Led the executive team in delivering events that promoted Thai culture at UBC.</li>
-                <li>Facilitated regular meetings to align team goals, track progress, and foster collaboration across departments.</li>
-              </ul>
+              <div className="details">
+                <div className="role">
+                  <div className="role-header">
+                    <h4>Co-President</h4>
+                    <span>Apr. 2025 – May 2026</span>
+                  </div>
+                  <ul>
+                    <li>Led the executive team in planning and running club events that promote Thai culture in the UBC community.</li>
+                    <li>Facilitated regular meetings to align team goals, track progress, and keep departments working together.</li>
+                  </ul>
+                </div>
+                <div className="role">
+                  <div className="role-header">
+                    <h4>Promotional Director</h4>
+                    <span>Apr. 2024 – Apr. 2025</span>
+                  </div>
+                  <ul>
+                    <li>Designed graphics, posters, and promotional materials for club events and activities.</li>
+                    <li>Created and managed social media content across Instagram, Facebook, and LINE.</li>
+                    <li>Tracked social media performance metrics and used them to shape future content and engagement.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article tabIndex={0} className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                <div>
+                  <h3 className="text-2xl font-semibold">Computer Aided Design Specialist</h3>
+                  <p className="mt-2 text-gray-400"><span className="company">UBC Rapid</span> · Vancouver, BC</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-gray-400">Sep. 2023 – Aug. 2025</p>
+                </div>
+              </div>
+              <div className="details">
+                <ul>
+                  <li>Built precise 3D CAD models in SOLIDWORKS, taking design requests from team members and external stakeholders and delivering custom solutions.</li>
+                  <li>Created rapid prototypes to test and validate design concepts through each design iteration.</li>
+                  <li>Diagnosed and fixed 3D-printing issues to keep production running smoothly.</li>
+                </ul>
+              </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="business" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="section-heading mb-10">
+            <p className="section-kicker">Entrepreneurship</p>
+            <h2 className="text-3xl font-bold md:text-4xl">Side Business</h2>
+          </div>
+
+          <article className="business-card grid gap-8 rounded-3xl border p-8 md:grid-cols-[1.35fr_1fr] md:p-10">
+            <div>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h3 className="text-2xl font-semibold">Online LEGO Store</h3>
+                <span className="business-date">Apr. 2023 – Present</span>
+              </div>
+              <p className="mt-2 text-gray-400"><span className="company">Founder &amp; Owner</span> · Shopee Thailand · Bangkok</p>
+              <p className="mt-5 leading-7 text-gray-300">
+                I founded and run an online LEGO retail shop on Shopee Thailand, handling everything from sourcing and pricing to customer service and delivery. Running it end to end has given me hands-on experience in e-commerce operations, digital marketing, sales analytics, and small business management.
+              </p>
+              <a
+                href="https://shopee.co.th/warotpete"
+                target="_blank"
+                rel="noreferrer"
+                className="business-link mt-7 inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold"
+              >
+                Visit my Shopee store →
+              </a>
+            </div>
+
+            <div>
+              <p className="business-label">What I handle</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="business-chip">Product sourcing</span>
+                <span className="business-chip">Inventory management</span>
+                <span className="business-chip">Pricing</span>
+                <span className="business-chip">Customer communication</span>
+                <span className="business-chip">Order fulfillment</span>
+                <span className="business-chip">Marketplace optimization</span>
+                <span className="business-chip">Sales analytics</span>
+                <span className="business-chip">Digital marketing</span>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -178,13 +271,14 @@ export default function Home() {
             <h2 className="text-3xl font-bold md:text-4xl">Competitions</h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
               <div className="relative h-56 overflow-hidden bg-gray-100">
                 <Image
                   src="/pantene-case-competition-winners.png"
                   alt="Winning team at the P&G Pantene Samaggi x ATSA Case Competition 2026"
                   fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover object-center transition duration-500 group-hover:scale-105"
                 />
               </div>
@@ -203,7 +297,7 @@ export default function Home() {
                   src="/true-innovation-launchpad-pitch.jpg"
                   alt="Warot pitching Ripples at True Innovation Launchpad 2026"
                   fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover object-[30%_center] transition duration-500 group-hover:scale-105"
                 />
               </div>
@@ -218,7 +312,7 @@ export default function Home() {
 
             <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
               <div className="relative h-56 overflow-hidden bg-gray-800">
-                <Image src="/salus.jpeg" alt="Salus Insurance at Botnoi HackFest 2023" fill className="object-cover transition duration-500 group-hover:scale-105" />
+                <Image src="/salus.jpeg" alt="Salus Insurance at Botnoi HackFest 2023" fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="p-7">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
@@ -264,10 +358,12 @@ export default function Home() {
             {/* Autonomous Driving Car */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
-                <img
+                <Image
                   src="/racing.png"
                   alt="Autonomous Driving Car Report"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">Autonomous Racing</h3>
@@ -302,10 +398,12 @@ export default function Home() {
             {/* Platformer Game */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/33I9vTGCc70/hqdefault.jpg"
                   alt="Platformer Game"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">Platformer Game</h3>
@@ -330,10 +428,12 @@ export default function Home() {
             {/* Sport Session Tracker */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
-                <img
+                <Image
                   src="/sportsession.png"
                   alt="Sport Session Tracker"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sport Session Tracker</h3>
@@ -361,10 +461,12 @@ export default function Home() {
             {/* UBCNET */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0">
-                <img
+                <Image
                   src="https://img.youtube.com/vi/Jg0pPHCoGXA/hqdefault.jpg"
                   alt="UBCNET Demo"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">UBCNET</h3>
@@ -407,7 +509,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold md:text-4xl">Skills</h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2">
             <div>
               <h3 className="text-lg font-semibold mb-4 text-blue-400">Business &amp; Analytics</h3>
               <div className="flex flex-wrap gap-2">
@@ -431,6 +533,19 @@ export default function Home() {
             </div>
 
             <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Engineering</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 text-sm rounded-full border">C</span>
+                <span className="px-3 py-1 text-sm rounded-full border">Java</span>
+                <span className="px-3 py-1 text-sm rounded-full border">JavaScript</span>
+                <span className="px-3 py-1 text-sm rounded-full border">AWS</span>
+                <span className="px-3 py-1 text-sm rounded-full border">Amazon Bedrock</span>
+                <span className="px-3 py-1 text-sm rounded-full border">ROS2</span>
+                <span className="px-3 py-1 text-sm rounded-full border">YOLO</span>
+              </div>
+            </div>
+
+            <div>
               <h3 className="text-lg font-semibold mb-4 text-blue-400">Languages</h3>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Thai (Native)</span>
@@ -445,10 +560,16 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="section-kicker">Contact</p>
           <h2 className="mb-5 text-3xl font-bold md:text-4xl">Feel free to reach out</h2>
-          <p className="text-lg text-gray-300 mb-12">
-            I&apos;m always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
+          <p className="text-lg text-gray-300 mb-6">
+            I&apos;m always open to discussing new projects, opportunities, and ideas.
           </p>
-          
+          <a
+            href="mailto:warotpete@gmail.com"
+            className="mb-10 inline-block text-xl font-semibold text-blue-400 underline decoration-blue-200 underline-offset-4 transition hover:text-blue-300"
+          >
+            warotpete@gmail.com
+          </a>
+
           <div className="flex justify-center gap-4 mb-12">
             <a
               href="mailto:warotpete@gmail.com"
