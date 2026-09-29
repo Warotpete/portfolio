@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -197,6 +201,42 @@ body {
   background: rgba(255, 255, 255, 0.9);
   padding: 1.35rem;
   box-shadow: 0 10px 28px rgba(42, 59, 86, 0.06);
+}
+
+.portfolio-shell #skills .grid > div {
+  border-top: 4px solid var(--skill-accent);
+}
+
+.portfolio-shell #skills .grid > div:nth-child(1) {
+  --skill-accent: #7c5cc4;
+  --skill-border: #cbbde9;
+  --skill-bg: #f1ecfa;
+  --skill-text: #4b2f8f;
+}
+
+.portfolio-shell #skills .grid > div:nth-child(2) {
+  --skill-accent: #2f6fc4;
+  --skill-border: #aac0df;
+  --skill-bg: #e6eef9;
+  --skill-text: #244c83;
+}
+
+.portfolio-shell #skills .grid > div:nth-child(3) {
+  --skill-accent: #1f9270;
+  --skill-border: #a8d8c6;
+  --skill-bg: #e5f5ef;
+  --skill-text: #17634c;
+}
+
+.portfolio-shell #skills .grid h3 {
+  color: var(--skill-text);
+}
+
+.portfolio-shell #skills .grid span {
+  border-color: var(--skill-border);
+  background: var(--skill-bg);
+  color: var(--skill-text);
+  font-weight: 650;
 }
 
 .portfolio-shell #projects article:hover img {

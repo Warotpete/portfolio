@@ -28,6 +28,9 @@ export default function Home() {
               <p className="max-w-2xl text-2xl font-medium leading-snug text-gray-100 md:text-3xl">
                 4th year Computer Engineering student @ UBC
               </p>
+              <p className="mt-3 max-w-2xl text-lg text-gray-400">
+                Building AI solutions for real business problems · Graduating May 2027
+              </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="/resume.pdf"
@@ -104,16 +107,17 @@ export default function Home() {
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">Technology Innovation Intern – True Alpha Program</h3>
-                  <p className="mt-2 text-gray-400">True Corporation · Internship · Bangkok, Thailand · On-site</p>
+                  <h3 className="text-2xl font-semibold">True Alpha Intern</h3>
+                  <p className="mt-2 text-gray-400">True Corporation · Bangkok, Thailand</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-gray-400">May 2026 – Present</p>
+                  <p className="text-gray-400">May 2026 – July 2026</p>
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Selected for True&apos;s flagship innovation program to develop technology-driven solutions for real business challenges.</li>
-                <li>Worked with cross-functional teams to take an AI and data-focused proof of concept from idea to implementation.</li>
+                <li>Analyzed the retail customer journey and stakeholder requirements to identify opportunities for humanoid robots to improve the in-store experience.</li>
+                <li>Worked with cross-functional teams to build a proof of concept, define priority use cases, and present recommendations to business and technical stakeholders.</li>
+                <li>Received the program&apos;s <strong>Winner Award</strong> for proposing a practical humanoid robot solution for retail customer engagement.</li>
               </ul>
             </article>
             <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
@@ -127,8 +131,8 @@ export default function Home() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Supported more than 700 students learning programming fundamentals in C.</li>
-                <li>Led weekly labs, explained algorithms and debugging, and provided feedback on assessments.</li>
+                <li>Support more than 700 students learning programming fundamentals in C.</li>
+                <li>Lead weekly labs, explain algorithms and debugging, and provide feedback on assessments.</li>
               </ul>
             </article>
 
@@ -155,28 +159,12 @@ export default function Home() {
                   <p className="mt-2 text-gray-400">UBC Thai Aiyara Student Club · Vancouver, BC</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-gray-400">Apr. 2024 – May. 2026</p>
+                  <p className="text-gray-400">Apr. 2024 – May 2026</p>
                 </div>
               </div>
               <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
                 <li>Led the executive team in delivering events that promoted Thai culture at UBC.</li>
-                <li>Directed team planning and created promotional content across social platforms.</li>
-              </ul>
-            </article>
-
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/10">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                <div>
-                  <h3 className="text-2xl font-semibold">Computer Aided Design Specialist</h3>
-                  <p className="mt-2 text-gray-400">UBC Rapid · Vancouver, BC</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-gray-400">Sep. 2023 – Sep. 2025</p>
-                </div>
-              </div>
-              <ul className="mt-6 space-y-3 list-disc list-inside text-gray-300">
-                <li>Designed custom 3D CAD models and rapid prototypes for internal and external projects.</li>
-                <li>Tested designs and resolved 3D-printing issues throughout the production process.</li>
+                <li>Facilitated regular meetings to align team goals, track progress, and foster collaboration across departments.</li>
               </ul>
             </article>
           </div>
@@ -211,17 +199,35 @@ export default function Home() {
 
             <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
               <div className="relative h-56 overflow-hidden bg-gray-800">
+                <Image
+                  src="/true-innovation-launchpad-pitch.jpg"
+                  alt="Warot pitching Ripples at True Innovation Launchpad 2026"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover object-[30%_center] transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-7">
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-2xl font-semibold">True Innovation Launchpad 2026</h3>
+                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">Top 20 · 2026</span>
+                </div>
+                <p className="text-gray-300">Pitched Ripples, a smart bathroom system that detects falls and health risks for older adults, and was selected as one of the top 20 teams from 203 ideas by more than 945 participants from 37 universities. Hosted by True LAB, NIA, and ThaiHealth under the theme &ldquo;Healthy Longevity Tech for Super-Aged Society.&rdquo;</p>
+              </div>
+            </article>
+
+            <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
+              <div className="relative h-56 overflow-hidden bg-gray-800">
                 <Image src="/salus.jpeg" alt="Salus Insurance at Botnoi HackFest 2023" fill className="object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="p-7">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-2xl font-semibold">Botnoi HackFest</h3>
-                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">Winner · 2026</span>
+                  <span className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-700">Winner · 2023</span>
                 </div>
                 <p className="mb-5 text-gray-300">Built Salus Insurance and won first place against more than 500 teams, with a Streamlit app deployed on Heroku and integrated with Omne.</p>
                 <div className="flex flex-wrap gap-4">
                   <a href="https://github.com/Warotpete/Salus_Frontend" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">GitHub →</a>
-                  <a href="/Salus.pdf" target="_blank" rel="noreferrer" className="font-medium text-blue-400 transition hover:text-blue-300">View slides →</a>
                 </div>
               </div>
             </article>
@@ -237,6 +243,24 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
+            {/* Multi-Agent Research Insights Tool */}
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
+              <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gradient-to-br from-[#2457a7] to-[#7aa2de] flex items-center justify-center">
+                <p className="px-6 text-center text-2xl font-bold text-white">UBC Cloud Innovation Centre</p>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Multi-Agent Institutional Research Insights Tool</h3>
+              <p className="text-gray-300 mb-4">
+                In a team of 5, building a lightweight multi-agent AI platform on AWS that analyzes publications, grants, and patents to help UBC find research collaboration opportunities. Leading weekly client meetings and delivering a pricing estimate and roadmap for adoption.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Python</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">Amazon Bedrock</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">MCP</span>
+                <span className="px-2 py-1 bg-blue-900/40 text-blue-200 text-xs rounded border border-blue-500/30">AWS CDK</span>
+              </div>
+              <p className="text-sm text-gray-400">2026 – Present · In progress</p>
+            </article>
+
             {/* Autonomous Driving Car */}
             <article className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/10 hover:bg-white/10 transition">
               <div className="relative h-48 rounded-lg mb-4 overflow-hidden flex-shrink-0 bg-gray-800">
@@ -272,15 +296,6 @@ export default function Home() {
                 >
                   View Report →
                 </a>
-                <a
-                  href="/autonomous_racing.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-medium transition"
-                >
-                  View Slides →
-                </a>
-                
               </div>
             </article>
 
@@ -385,53 +400,41 @@ export default function Home() {
         </div>
       </section>
 
-    <section id="skills" className="hidden py-20 px-6 bg-[#08101f]" aria-hidden="true">
+      <section id="skills" className="py-20 px-6 bg-[#08101f]">
         <div className="max-w-6xl mx-auto">
           <div className="section-heading mb-10">
             <p className="section-kicker">What I work with</p>
-            <h2 className="text-3xl font-bold md:text-4xl">Skills &amp; Tech Stack</h2>
-            <p className="mt-3 text-gray-400">Languages, frameworks, tools, and platforms I use to bring ideas to life.</p>
+            <h2 className="text-3xl font-bold md:text-4xl">Skills</h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-3">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Business &amp; Analytics</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Market research</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Consumer insights</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Data analysis</span>
+                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Strategic problem-solving</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Technical</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">SQL</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Excel</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">PowerPoint</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Scikit-learn</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Git</span>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-lg font-semibold mb-4 text-blue-400">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">C</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Java</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">JavaScript</span>
-                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">TypeScript</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">AI/ML</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">TensorFlow</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">Scikit-learn</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">YOLO</span>
-                <span className="px-3 py-1 bg-purple-900/30 text-purple-300 text-sm rounded-full border border-purple-500/30">LiDAR</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">Frameworks</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">React</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Next.js</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Streamlit</span>
-                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">ROS2</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-blue-400">Tools & Platforms</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Git</span>
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Docker</span>
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Heroku</span>
-                <span className="px-3 py-1 bg-yellow-900/30 text-yellow-300 text-sm rounded-full border border-yellow-500/30">AWS</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">Thai (Native)</span>
+                <span className="px-3 py-1 bg-green-900/30 text-green-300 text-sm rounded-full border border-green-500/30">English (Professional)</span>
               </div>
             </div>
           </div>
@@ -443,12 +446,12 @@ export default function Home() {
           <p className="section-kicker">Contact</p>
           <h2 className="mb-5 text-3xl font-bold md:text-4xl">Feel free to reach out</h2>
           <p className="text-lg text-gray-300 mb-12">
-            I'm always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
+            I&apos;m always open to discussing new projects, opportunities, and ideas. Feel free to reach out!
           </p>
           
           <div className="flex justify-center gap-4 mb-12">
             <a
-              href="mailto:warot.tharan@gmail.com"
+              href="mailto:warotpete@gmail.com"
               aria-label="Send email"
               className="w-16 h-16 flex items-center justify-center rounded-xl bg-blue-500 hover:bg-blue-600 transition"
             >

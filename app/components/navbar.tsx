@@ -8,6 +8,7 @@ export default function Navbar() {
     { href: "#work-experience", label: "Experience" },
     { href: "#competitions",    label: "Competitions" },
     { href: "#projects",        label: "Projects"   },
+    { href: "#skills",          label: "Skills"     },
   ];
 
   return (

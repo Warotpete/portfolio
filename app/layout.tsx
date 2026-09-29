@@ -13,19 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://warotpete.vercel.app"),
   title: "Warot Tharanamai | Computer Engineering & AI/ML",
   description: "Portfolio of Warot Tharanamai - Computer Engineering student at UBC specializing in machine learning, autonomous systems, and full-stack development.",
   openGraph: {
     title: "Warot Tharanamai | Computer Engineering & AI/ML",
     description: "Computer Engineering student at UBC. Building AI, robotics, and full-stack projects.",
     type: "website",
-    url: "https://warot-portfolio.com",
+    url: "/",
     siteName: "Warot Tharanamai",
+    images: [{ url: "/profile.jpeg", alt: "Warot Tharanamai" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Warot Tharanamai | Computer Engineering & AI/ML",
     description: "Computer Engineering student at UBC specializing in ML and autonomous systems.",
+    images: ["/profile.jpeg"],
   },
 };
 

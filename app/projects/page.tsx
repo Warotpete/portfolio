@@ -142,7 +142,15 @@ export default function Projects() {
               >
                 GitHub →
               </a>
-              <p className="text-sm text-gray-500 mt-4">CPSC 304 @ UBC</p>
+              <p className="text-sm text-gray-500 mt-4">
+                CPSC 304 @{" "}
+                <a
+                  href="https://www.ubc.ca/"
+                  className="hover:text-blue-400 transition"
+                >
+                  The University of British Columbia
+                </a>
+              </p>
             </div>
 
             {/* Platformer Game */}
