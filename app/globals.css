@@ -46,8 +46,8 @@ html {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,14 +60,24 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
+/* Palette: white and black carry the page, red is the small accent */
 .portfolio-shell {
+  --ink: #111111;
+  --paper: #f8f8f8;
+  --mist: #eeeeee;
+  --red: #ee0000;
+  --red-dark: #cc0000;
+  --text: #3d3d3d;
+  --muted: #6b6b6b;
+  --line: #e2e2e2;
+
   background:
-    radial-gradient(circle at 8% 4%, rgba(112, 164, 255, 0.17), transparent 25rem),
-    #fffdf8;
-  color: #172033;
+    radial-gradient(circle at 8% 4%, rgba(238, 0, 0, 0.06), transparent 25rem),
+    var(--paper);
+  color: var(--ink);
 }
 
 .portfolio-shell > section {
@@ -75,13 +85,15 @@ body {
 }
 
 .portfolio-shell > section:nth-of-type(even) {
-  background-color: #f4f7fb;
+  background-color: var(--mist);
 }
 
 .portfolio-shell h1,
 .portfolio-shell h2,
-.portfolio-shell h3 {
-  color: #14213d;
+.portfolio-shell h3,
+.portfolio-shell h4 {
+  color: var(--ink);
+  font-family: var(--font-space-grotesk), var(--font-inter), sans-serif;
   letter-spacing: -0.025em;
 }
 
@@ -95,7 +107,7 @@ body {
 
 .portfolio-shell .section-kicker {
   margin-bottom: 0.6rem;
-  color: #2457a7;
+  color: var(--red);
   font-size: 0.78rem;
   font-weight: 750;
   letter-spacing: 0.16em;
@@ -103,39 +115,39 @@ body {
 }
 
 .portfolio-shell .text-gray-100 {
-  color: #27364f;
+  color: var(--ink);
 }
 
 .portfolio-shell .text-gray-200,
 .portfolio-shell .text-gray-300 {
-  color: #475569;
+  color: var(--text);
 }
 
 .portfolio-shell .text-gray-400 {
-  color: #64748b;
+  color: var(--muted);
 }
 
 .portfolio-shell .text-blue-400 {
-  color: #2457a7;
+  color: var(--red);
 }
 
 .portfolio-shell .hover\:text-blue-300:hover {
-  color: #173f80;
+  color: var(--red-dark);
 }
 
 .portfolio-shell article {
-  border-color: #dbe3ee;
+  border-color: var(--line);
   background-color: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 14px 38px rgba(42, 59, 86, 0.08);
+  box-shadow: 0 14px 38px rgba(17, 17, 17, 0.08);
 }
 
 .portfolio-shell article:hover {
-  border-color: #b9c9de;
+  border-color: #cfcfcf;
   background-color: #ffffff;
 }
 
 .portfolio-shell #work-experience article {
-  border-left: 4px solid #7aa2de;
+  border-left: 4px solid var(--red);
   padding: 1.75rem;
 }
 
@@ -145,17 +157,17 @@ body {
 }
 
 .portfolio-shell #work-experience article .company {
-  color: #2457a7;
+  color: var(--red-dark);
   font-size: 1.05rem;
   font-weight: 650;
 }
 
 .portfolio-shell #work-experience article .text-right p {
   display: inline-flex;
-  border-radius: 999px;
-  background: #edf3fb;
+  border-radius: 0;
+  background: var(--mist);
   padding: 0.45rem 0.8rem;
-  color: #315d9c;
+  color: var(--ink);
   font-size: 0.82rem;
   font-weight: 650;
   white-space: nowrap;
@@ -166,7 +178,7 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   padding-left: 1.25rem;
-  color: #475569;
+  color: var(--text);
   line-height: 1.7;
   list-style: disc;
 }
@@ -187,7 +199,7 @@ body {
   bottom: 0.5rem;
   left: 0.45rem;
   width: 2px;
-  background: linear-gradient(#b9cdea, #dbe3ee);
+  background: linear-gradient(var(--red), var(--line));
 }
 
 .portfolio-shell .timeline > article {
@@ -202,21 +214,21 @@ body {
   left: calc(-2rem + 0.45rem + 1px - 6px - 4px);
   width: 12px;
   height: 12px;
-  border: 3px solid #2457a7;
-  border-radius: 999px;
-  background: #fffdf8;
+  border: 3px solid var(--red);
+  border-radius: 0;
+  background: var(--paper);
   transition: background-color 250ms ease;
 }
 
 .portfolio-shell .timeline > article:hover::before,
 .portfolio-shell .timeline > article:focus-within::before {
-  background: #2457a7;
+  background: var(--red);
 }
 
 .portfolio-shell #work-experience .role + .role {
   margin-top: 1.25rem;
   padding-top: 1.25rem;
-  border-top: 1px dashed #dbe3ee;
+  border-top: 1px dashed var(--line);
 }
 
 .portfolio-shell #work-experience .role-header {
@@ -229,13 +241,13 @@ body {
 }
 
 .portfolio-shell #work-experience .role-header h4 {
-  color: #14213d;
+  color: var(--ink);
   font-size: 1rem;
   font-weight: 650;
 }
 
 .portfolio-shell #work-experience .role-header span {
-  color: #64748b;
+  color: var(--muted);
   font-size: 0.82rem;
   font-weight: 600;
 }
@@ -248,7 +260,7 @@ body {
 }
 
 .portfolio-shell #work-experience article:focus-visible {
-  box-shadow: 0 0 0 3px #b9cdea;
+  box-shadow: 0 0 0 3px rgba(238, 0, 0, 0.25);
 }
 
 .portfolio-shell #work-experience .details {
@@ -271,7 +283,7 @@ body {
   display: block;
   max-height: 2rem;
   margin-top: 0.75rem;
-  color: #7b8aa3;
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -306,44 +318,32 @@ body {
 }
 
 .portfolio-shell #work-experience li::marker {
-  color: #4778bd;
+  color: var(--red);
 }
 
 .portfolio-shell #business .business-card {
-  border-color: #f0d9b5;
-  background: linear-gradient(135deg, #fffaf1 0%, #ffffff 60%);
+  border-color: var(--line);
+  background: #ffffff;
 }
 
 .portfolio-shell #business .company {
-  color: #b25e09;
+  color: var(--red-dark);
   font-weight: 650;
 }
 
 .portfolio-shell #business .business-date {
-  border-radius: 999px;
-  background: #fdf0dc;
+  border-radius: 0;
+  background: var(--mist);
   padding: 0.45rem 0.8rem;
-  color: #8a4d0f;
+  color: var(--ink);
   font-size: 0.82rem;
   font-weight: 650;
   white-space: nowrap;
 }
 
-.portfolio-shell #business .business-link {
-  background: #ee4d2d;
-  color: #ffffff;
-  box-shadow: 0 8px 20px rgba(238, 77, 45, 0.22);
-  transition: background-color 200ms ease, transform 200ms ease;
-}
-
-.portfolio-shell #business .business-link:hover {
-  background: #d73211;
-  transform: translateY(-1px);
-}
-
 .portfolio-shell #business .business-label {
   margin-bottom: 0.9rem;
-  color: #64748b;
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 750;
   letter-spacing: 0.14em;
@@ -351,11 +351,11 @@ body {
 }
 
 .portfolio-shell #business .business-chip {
-  border: 1px solid #ecc9a0;
-  border-radius: 999px;
-  background: #fbf0e3;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
   padding: 0.3rem 0.8rem;
-  color: #8a4d0f;
+  color: var(--ink);
   font-size: 0.875rem;
   font-weight: 650;
 }
@@ -366,38 +366,70 @@ body {
 
 .portfolio-shell #projects article,
 .portfolio-shell #competitions article {
-  border-radius: 1.5rem;
+  border-radius: 0;
 }
 
 .portfolio-shell #projects article span {
-  border-color: #aac0df;
-  background: #e6eef9;
-  color: #244c83;
+  border-color: var(--line);
+  background: var(--paper);
+  color: var(--ink);
   font-weight: 650;
 }
 
-.portfolio-shell #projects article a,
-.portfolio-shell #competitions article a {
-  color: #174f9c;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: #b8cbe6;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+/* Text links ("GitHub ↗"): no box, an underline slides in on hover */
+.portfolio-shell .link-arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.3rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-.portfolio-shell #projects article a:hover,
-.portfolio-shell #competitions article a:hover {
-  color: #0f3973;
-  text-decoration-color: #0f3973;
+.portfolio-shell .link-arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+
+.portfolio-shell .link-arrow:hover::after,
+.portfolio-shell .link-arrow:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Shopee's brand orange for the store link */
+.portfolio-shell .link-shopee {
+  color: #ee4d2d;
+}
+
+.portfolio-shell .link-shopee::after {
+  background: #ee4d2d;
+}
+
+.portfolio-shell .link-arrow-lg {
+  font-size: 1.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-shell .link-arrow::after {
+    transition: none;
+  }
 }
 
 .portfolio-shell #skills .grid > div {
-  border: 1px solid #dbe3ee;
-  border-radius: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.9);
   padding: 1.35rem;
-  box-shadow: 0 10px 28px rgba(42, 59, 86, 0.06);
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.06);
 }
 
 .portfolio-shell #skills .grid > div {
@@ -405,31 +437,31 @@ body {
 }
 
 .portfolio-shell #skills .grid > div:nth-child(1) {
-  --skill-accent: #7c5cc4;
-  --skill-border: #cbbde9;
-  --skill-bg: #f1ecfa;
-  --skill-text: #4b2f8f;
+  --skill-accent: var(--red);
+  --skill-border: var(--line);
+  --skill-bg: var(--paper);
+  --skill-text: var(--ink);
 }
 
 .portfolio-shell #skills .grid > div:nth-child(2) {
-  --skill-accent: #2f6fc4;
-  --skill-border: #aac0df;
-  --skill-bg: #e6eef9;
-  --skill-text: #244c83;
+  --skill-accent: var(--ink);
+  --skill-border: var(--line);
+  --skill-bg: var(--paper);
+  --skill-text: var(--ink);
 }
 
 .portfolio-shell #skills .grid > div:nth-child(3) {
-  --skill-accent: #c4761f;
-  --skill-border: #ecc9a0;
-  --skill-bg: #fbf0e3;
-  --skill-text: #8a4d0f;
+  --skill-accent: var(--red-dark);
+  --skill-border: var(--line);
+  --skill-bg: var(--paper);
+  --skill-text: var(--ink);
 }
 
 .portfolio-shell #skills .grid > div:nth-child(4) {
-  --skill-accent: #1f9270;
-  --skill-border: #a8d8c6;
-  --skill-bg: #e5f5ef;
-  --skill-text: #17634c;
+  --skill-accent: #8a8a8a;
+  --skill-border: var(--line);
+  --skill-bg: var(--paper);
+  --skill-text: var(--ink);
 }
 
 .portfolio-shell #skills .grid h3 {
@@ -448,8 +480,12 @@ body {
 }
 
 .portfolio-shell footer {
-  border-color: #dbe3ee;
-  background: #eef3f9;
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.portfolio-shell footer .text-gray-400 {
+  color: #b5b5b5;
 }
 
 @media (max-width: 767px) {
@@ -461,4 +497,10 @@ body {
   .portfolio-shell #work-experience article {
     padding: 1.35rem;
   }
+}
+
+/* Sharp corners everywhere: override Tailwind's rounded-* utilities
+   (the blurred hero glows keep their soft shape) */
+.portfolio-shell [class*="rounded"]:not(.blur-3xl) {
+  border-radius: 0 !important;
 }
