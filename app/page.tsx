@@ -1,16 +1,26 @@
 import Image from "next/image";
 import Navbar from "./components/navbar";
+import ScrollReveal from "./components/scroll-reveal";
+import CompetitionsScroll from "./components/competitions-scroll";
 
 export default function Home() {
   return (
     <main className="portfolio-shell min-h-screen bg-[#f8f8f8] text-slate-900">
       <Navbar />
+      <ScrollReveal />
 
-      <section className="relative flex min-h-screen items-center px-6 pb-20 pt-32">
-        {/* Enhanced hero background */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-red-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-black/5 rounded-full blur-3xl"></div>
+      <section className="hero relative isolate flex min-h-screen items-center overflow-hidden px-6 pb-20 pt-32">
+        {/* Network image backdrop with a dark overlay so the text stays readable */}
+        <div className="absolute inset-0 -z-10" aria-hidden="true">
+          <Image
+            src="/hero-network.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="hero-image object-cover object-bottom"
+            priority
+          />
+          <div className="hero-overlay absolute inset-0"></div>
         </div>
 
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr]">
@@ -28,9 +38,6 @@ export default function Home() {
               <p className="max-w-2xl text-2xl font-medium leading-snug text-gray-100 md:text-3xl">
                 4th year Computer Engineering student @ UBC
               </p>
-              <p className="mt-3 max-w-2xl text-lg text-gray-400">
-                Building AI solutions for real business problems · Graduating May 2027
-              </p>
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <a
                   href="/resume.pdf"
@@ -44,7 +51,7 @@ export default function Home() {
                   href="https://github.com/Warotpete"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-3 text-slate-700 shadow-sm transition hover:border-[#ee0000] hover:text-[#ee0000]"
+                  className="hero-icon inline-flex items-center justify-center p-3"
                   aria-label="GitHub profile"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -55,7 +62,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/warotpete/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-3 text-slate-700 shadow-sm transition hover:border-[#ee0000] hover:text-[#ee0000]"
+                  className="hero-icon inline-flex items-center justify-center p-3"
                   aria-label="LinkedIn profile"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -67,15 +74,17 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center animate-fade-in-scale" style={{ animationDelay: "0.4s" }}>
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl">
-              <Image
-                src="/profile.jpeg"
-                alt="Warot Tharanamai"
-                fill
-                sizes="(min-width: 768px) 384px, 288px"
-                className="object-cover scale-[1.06]"
-                priority
-              />
+            <div className="photo-frame relative">
+              <div className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden shadow-2xl">
+                <Image
+                  src="/profile.jpeg"
+                  alt="Warot Tharanamai"
+                  fill
+                  sizes="(min-width: 768px) 384px, 288px"
+                  className="object-cover scale-[1.06]"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
@@ -88,10 +97,15 @@ export default function Home() {
             <p className="section-kicker">Introduction</p>
             <h2 className="text-3xl font-bold md:text-4xl">About Me</h2>
           </div>
-          <div className="max-w-4xl text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
+          <div className="max-w-4xl space-y-6 text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
             <p>
-              I&apos;m a Computer Engineering student at the University of British Columbia passionate about machine learning, autonomous systems, and modern software engineering.
-              I enjoy building real-world projects that combine AI, robotics, and full-stack development — from self-driving systems and computer vision models to scalable web applications and cloud infrastructure. I&apos;m also interested in finance, business strategy, and technology-driven innovation, and I explore these interests by competing in case competitions that challenge me to connect technical ideas with real business opportunities.
+              Hi, I&apos;m Warot, a Computer Engineering student at the University of British Columbia. My experience spans from developing a computer vision system for industrial inventory monitoring to designing an award-winning humanoid robotics concept at True Corporation.
+            </p>
+            <p>
+              Beyond engineering, I enjoy exploring how ideas become valuable products and businesses. I won a P&amp;G Thailand case competition by developing a consumer-led growth strategy, and I previously served as President of the UBC Thai Aiyara Student Club.
+            </p>
+            <p>
+              Outside of work and university, I run a small online LEGO shop, managing its inventory, pricing, marketing and customer relationships. I have also been investing in stocks since 2022, which has strengthened my interest in researching companies, understanding business models and examining how technology can influence long-term growth.
             </p>
           </div>
         </div>
@@ -264,70 +278,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="competitions" className="py-20 px-6 bg-[#0b0f19]">
-        <div className="max-w-6xl mx-auto">
-          <div className="section-heading mb-10">
-            <p className="section-kicker">Awards &amp; recognition</p>
-            <h2 className="text-3xl font-bold md:text-4xl">Competitions</h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
-              <div className="relative h-56 overflow-hidden bg-gray-100">
-                <Image
-                  src="/pantene-case-competition-winners.png"
-                  alt="Winning team at the P&G Pantene Samaggi x ATSA Case Competition 2026"
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover object-center transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-7">
-                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="text-2xl font-semibold">Pantene Miracles Case Competition</h3>
-                  <span className="rounded-full border border-[#ee0000] bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#cc0000]">Winner · 2026</span>
-                </div>
-                <p className="text-gray-300">Developed and presented a winning strategy for the Pantene Miracles business case at the Samaggi x ATSA Case Competition in Bangkok.</p>
-              </div>
-            </article>
-
-            <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
-              <div className="relative h-56 overflow-hidden bg-gray-800">
-                <Image
-                  src="/true-innovation-launchpad-pitch.jpg"
-                  alt="Warot pitching Ripples at True Innovation Launchpad 2026"
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover object-[30%_center] transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-7">
-                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="text-2xl font-semibold">True Innovation Launchpad 2026</h3>
-                  <span className="rounded-full border border-[#ee0000] bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#cc0000]">Top 20 · 2026</span>
-                </div>
-                <p className="text-gray-300">Pitched Ripples, a smart bathroom system that detects falls and health risks for older adults, and was selected as one of the top 20 teams from 203 ideas by more than 945 participants from 37 universities. Hosted by True LAB, NIA, and ThaiHealth under the theme &ldquo;Healthy Longevity Tech for Super-Aged Society.&rdquo;</p>
-              </div>
-            </article>
-
-            <article className="group overflow-hidden rounded-3xl border border-amber-300/20 bg-white/5 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:bg-white/[0.07]">
-              <div className="relative h-56 overflow-hidden bg-gray-800">
-                <Image src="/salus.jpeg" alt="Salus Insurance at Botnoi HackFest 2023" fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
-              </div>
-              <div className="p-7">
-                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="text-2xl font-semibold">Botnoi HackFest</h3>
-                  <span className="rounded-full border border-[#ee0000] bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#cc0000]">Winner · 2023</span>
-                </div>
-                <p className="mb-5 text-gray-300">Built Salus Insurance and won first place against more than 500 teams, with a Streamlit app deployed on Heroku and integrated with Omne.</p>
-                <div className="flex flex-wrap gap-4">
-                  <a href="https://github.com/Warotpete/Salus_Frontend" target="_blank" rel="noreferrer" className="link-arrow">GitHub ↗</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <CompetitionsScroll />
 
       <section id="projects" className="py-20 px-6 bg-[#0b0f19]">
         <div className="max-w-6xl mx-auto">
@@ -421,7 +372,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="link-arrow"
               >
-                Watch Demo ↗
+                Demo ↗
               </a>
             </article>
 
@@ -493,7 +444,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="link-arrow"
                 >
-                  Watch Demo ↗
+                  Demo ↗
                 </a>
                 
               </div>
@@ -525,6 +476,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Python</span>
                 <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">SQL</span>
+                <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Oracle Database</span>
                 <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Excel</span>
                 <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">PowerPoint</span>
                 <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-sm rounded-full border border-blue-500/30">Scikit-learn</span>
@@ -538,10 +490,15 @@ export default function Home() {
                 <span className="px-3 py-1 text-sm rounded-full border">C</span>
                 <span className="px-3 py-1 text-sm rounded-full border">Java</span>
                 <span className="px-3 py-1 text-sm rounded-full border">JavaScript</span>
+                <span className="px-3 py-1 text-sm rounded-full border">Node.js</span>
+                <span className="px-3 py-1 text-sm rounded-full border">Express</span>
                 <span className="px-3 py-1 text-sm rounded-full border">AWS</span>
+                <span className="px-3 py-1 text-sm rounded-full border">AWS CDK</span>
                 <span className="px-3 py-1 text-sm rounded-full border">Amazon Bedrock</span>
+                <span className="px-3 py-1 text-sm rounded-full border">MCP</span>
                 <span className="px-3 py-1 text-sm rounded-full border">ROS2</span>
                 <span className="px-3 py-1 text-sm rounded-full border">YOLO</span>
+                <span className="px-3 py-1 text-sm rounded-full border">Computer Vision</span>
               </div>
             </div>
 

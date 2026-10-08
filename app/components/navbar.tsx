@@ -1,8 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
+
+  // Collapse the bar while scrolling down, bring it back on any scroll up
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y < 80) setHidden(false);
+      else if (y > lastY.current + 4) setHidden(true);
+      else if (y < lastY.current - 4) setHidden(false);
+      lastY.current = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const links = [
     { href: "#work-experience", label: "Experience" },
@@ -13,7 +28,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 px-4 pt-3 text-slate-900">
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 px-4 pt-3 text-slate-900 transition-transform duration-300 motion-reduce:transition-none ${
+        hidden && !open ? "-translate-y-[120%]" : "translate-y-0"
+      }`}
+      onFocus={() => setHidden(false)}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3 shadow-[0_8px_30px_rgba(30,48,75,0.08)] backdrop-blur-xl md:px-5">
 
         {/* Logo */}
