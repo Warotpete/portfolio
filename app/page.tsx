@@ -13,7 +13,7 @@ export default function Home() {
         {/* Network image backdrop with a dark overlay so the text stays readable */}
         <div className="absolute inset-0 -z-10" aria-hidden="true">
           <Image
-            src="/hero-network.jpg"
+            src="/hero-network-hd.jpg"
             alt=""
             fill
             sizes="100vw"
@@ -97,7 +97,7 @@ export default function Home() {
             <p className="section-kicker">Introduction</p>
             <h2 className="text-3xl font-bold md:text-4xl">About Me</h2>
           </div>
-          <div className="max-w-4xl space-y-6 text-lg leading-8 text-gray-300 md:text-xl md:leading-9">
+          <div className="max-w-3xl space-y-5 text-base leading-7 text-gray-300 md:text-lg md:leading-8">
             <p>
               Hi, I&apos;m Warot, a Computer Engineering student at the University of British Columbia. My experience spans from developing a computer vision system for industrial inventory monitoring to designing an award-winning humanoid robotics concept at True Corporation.
             </p>
