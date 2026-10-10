@@ -23,14 +23,14 @@ export default function Home() {
           <div className="hero-overlay absolute inset-0"></div>
         </div>
 
-        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.3fr_0.7fr]">
           
           <div>
             <p className="text-blue-400 font-semibold tracking-wide mb-4 text-base md:text-lg uppercase">
               Hello, I&apos;m
             </p>
 
-            <h1 className="animate-fade-in-up text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl" style={{ animationDelay: "0.1s" }}>
+            <h1 className="hero-title animate-fade-in-up font-bold tracking-tight" style={{ animationDelay: "0.1s" }}>
               Warot Tharanamai
             </h1>
 
@@ -75,12 +75,12 @@ export default function Home() {
 
           <div className="flex justify-center animate-fade-in-scale" style={{ animationDelay: "0.4s" }}>
             <div className="photo-frame relative">
-              <div className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden shadow-2xl">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden shadow-2xl">
                 <Image
                   src="/profile.jpeg"
                   alt="Warot Tharanamai"
                   fill
-                  sizes="(min-width: 768px) 384px, 288px"
+                  sizes="(min-width: 768px) 320px, 256px"
                   className="object-cover scale-[1.06]"
                   priority
                 />

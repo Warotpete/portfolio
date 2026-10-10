@@ -83,6 +83,55 @@ body {
   color: var(--ink);
 }
 
+/* Type scale: big titles, mid subtitles, 16-18px body text.
+   Sizes grow with the screen and stop at a maximum. */
+.portfolio-shell .hero-title {
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 1;
+}
+
+.portfolio-shell h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+/* Breathing room: generous space between sections, under section titles
+   and between cards. The pinned Competitions section keeps its own sizing. */
+@media (min-width: 768px) {
+  .portfolio-shell > section[id]:not(#competitions) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .portfolio-shell .section-heading:not(.comp-heading) {
+    margin-bottom: 3.5rem;
+  }
+
+  .portfolio-shell #projects .grid {
+    gap: 2.5rem;
+  }
+
+  .portfolio-shell #skills .grid {
+    gap: 1.75rem;
+  }
+
+  .portfolio-shell #work-experience .timeline {
+    gap: 1.75rem;
+  }
+}
+
+/* Film grain over the whole page for a softer, more cinematic finish.
+   Fixed so the grain stays put while the content scrolls under it. */
+.portfolio-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 /* Hero: the network image turned light (greyscale + inverted, so the dark
    background becomes white and the glowing mesh becomes grey lines), with a
    light overlay so the dark text stays readable */

@@ -41,8 +41,8 @@ const COMPETITIONS: Competition[] = [
     badge: "Winner · 2023",
     description:
       "Built Salus Insurance, an insurance cost predictor developed in collaboration with FWD Thailand, and won first place against more than 500 teams. The Streamlit app was deployed on Heroku and integrated with Omne.",
-    image: "/salus.jpeg",
-    imageAlt: "Salus Insurance at Botnoi HackFest 2023",
+    image: "/botnoi-hackfest-team.jpg",
+    imageAlt: "Warot and the Salus Insurance team with their FWD prize at Botnoi HackFest 2023",
     link: { href: "https://github.com/Warotpete/Salus_Frontend", label: "GitHub ↗" },
   },
 ];
@@ -118,7 +118,7 @@ export default function CompetitionsScroll() {
           <div className="mx-auto w-full max-w-6xl">
             <Heading />
 
-            <div className="grid grid-cols-[1fr_1.15fr] items-center gap-14">
+            <div className="grid grid-cols-[1.1fr_0.9fr] items-center gap-14">
               <div>
                 <div className="comp-stack">
                   {COMPETITIONS.map((item, i) => (
