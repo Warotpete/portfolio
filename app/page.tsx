@@ -126,6 +126,13 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
+    title: "Multi-Agent Institutional Research Insights Tool",
+    description:
+      "In a team of 5, building a lightweight multi-agent AI platform on AWS that analyzes publications, grants, and patents to help UBC find research collaboration opportunities. Leading weekly client meetings and delivering a pricing estimate and roadmap for adoption.",
+    tags: ["Python", "Amazon Bedrock", "MCP", "AWS CDK"],
+    note: "UBC Cloud Innovation Centre · 2026 – Present",
+  },
+  {
     title: "Autonomous Racing",
     description:
       "Real-time self-driving system using ROS2 with LiDAR for navigation. Implemented Gap Follow + Automatic Emergency Braking algorithms.",
@@ -138,11 +145,16 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "Multi-Agent Institutional Research Insights Tool",
+    title: "Football Forecast Lab",
     description:
-      "In a team of 5, building a lightweight multi-agent AI platform on AWS that analyzes publications, grants, and patents to help UBC find research collaboration opportunities. Leading weekly client meetings and delivering a pricing estimate and roadmap for adoption.",
-    tags: ["Python", "Amazon Bedrock", "MCP", "AWS CDK"],
-    note: "UBC Cloud Innovation Centre · 2026 – Present",
+      "Premier League 2026–27 title forecast built on a regularized attack/defence Poisson goal model with learned home advantage. Simulates the rest of the season 10,000 times for title, top-four and relegation odds, with gameweek points projections and chronological backtesting.",
+    tags: ["Python", "Streamlit", "Statistical Modelling"],
+    screen: { src: "/football-forecast-screen.jpg", url: "football-forecast.streamlit.app" },
+    imageAlt: "Football Forecast Lab dashboard showing Premier League title chances",
+    links: [
+      { href: "https://football-forecast.streamlit.app/", label: "Live app" },
+      { href: "https://github.com/Warotpete/Premier-League-26-27-winner-forcast", label: "GitHub" },
+    ],
   },
   {
     title: "Sport Session Tracker",
