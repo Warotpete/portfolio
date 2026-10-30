@@ -9,6 +9,18 @@ type Job = { role: string; org: string; place: string; dates: string; points?: R
 
 const EXPERIENCE: Job[] = [
   {
+    role: "Undergraduate Teaching Assistant",
+    org: "UBC Electrical and Computer Engineering",
+    place: "Vancouver, BC",
+    dates: "Aug. 2025 – Present",
+    points: [
+      "Support more than 700 students in APSC 160, Introduction to Computation in Engineering Design.",
+      "Lead weekly lab sessions on C programming, problem-solving, and computational design.",
+      "Give presentations and live demonstrations that walk through programming logic, algorithms, and debugging techniques.",
+      "Grade programming assignments, quizzes, and exams, with feedback that helps students keep improving.",
+    ],
+  },
+  {
     role: "True Alpha Intern",
     org: "True Corporation",
     place: "Bangkok, Thailand",
@@ -18,18 +30,6 @@ const EXPERIENCE: Job[] = [
       "Analyzed the retail customer journey and gathered stakeholder requirements to identify where humanoid robots could improve the in-store experience.",
       "Worked with mentors and cross-functional teams to take a proof of concept from ideation through implementation, define priority use cases, and present recommendations to business and technical stakeholders.",
       <>Received the program&apos;s <strong>Winner Award</strong> for proposing a practical humanoid robot solution for retail customer engagement.</>,
-    ],
-  },
-  {
-    role: "APSC 160 Undergraduate Teaching Assistant",
-    org: "UBC Electrical and Computer Engineering",
-    place: "Vancouver, BC",
-    dates: "Aug. 2025 – Present",
-    points: [
-      "Support more than 700 students in APSC 160, Introduction to Computation in Engineering Design.",
-      "Lead weekly lab sessions on C programming, problem-solving, and computational design.",
-      "Give presentations and live demonstrations that walk through programming logic, algorithms, and debugging techniques.",
-      "Grade programming assignments, quizzes, and exams, with feedback that helps students keep improving.",
     ],
   },
   {
@@ -68,7 +68,7 @@ const EXPERIENCE: Job[] = [
     ],
   },
   {
-    role: "Computer Aided Design Specialist",
+    role: "Design Team Member",
     org: "UBC Rapid",
     place: "Vancouver, BC",
     dates: "Sep. 2023 – Aug. 2025",
@@ -126,11 +126,24 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    title: "Multi-Agent Institutional Research Insights Tool",
+    title: "Research Copilot: Multi-Agent Institutional Research Insights Tool",
     description:
       "In a team of 5, building a lightweight multi-agent AI platform on AWS that analyzes publications, grants, and patents to help UBC find research collaboration opportunities. Leading weekly client meetings and delivering a pricing estimate and roadmap for adoption.",
     tags: ["Python", "Amazon Bedrock", "MCP", "AWS CDK"],
     note: "UBC Cloud Innovation Centre · 2026 – Present",
+  },
+  {
+    title: "Zero Second",
+    description:
+      "The anticipation layer for football, built for the Microsoft × Premier League Inside the Game hackathon. Forecasts the storylines that could happen next, has AI agents write and verify content for them in advance, and lets a producer pre-approve it so it publishes the instant the moment happens.",
+    tags: ["Python", "Microsoft Foundry", "Agent Framework", "MCP", "Azure"],
+    screen: { src: "/zero-second-screen.jpg", url: "zero-second · media desk" },
+    imageAlt: "Zero Second Media Desk with the live Story Radar of upcoming storylines",
+    links: [
+      { href: "https://zero-second.kindwave-e64411c5.eastus2.azurecontainerapps.io/desk", label: "Live demo" },
+      { href: "https://github.com/Warotpete/zero-second", label: "GitHub" },
+      { href: "https://youtu.be/mxpBGSXXRhA", label: "Video" },
+    ],
   },
   {
     title: "Autonomous Racing",
