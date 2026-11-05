@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "./components/navbar";
 import ScrollReveal from "./components/scroll-reveal";
+import Carousel from "./components/carousel";
 
 /* ---------- Content ---------- */
 
@@ -384,11 +385,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects: heading left, row of cards right */}
+      {/* Projects: heading left, cards in a row you move through with arrows */}
       <section id="projects" className="block tone-light">
         <div className="shell split">
           <Title top="Selected" bottom="Projects" />
-          <div className="cards" data-stagger="150">
+          <Carousel label="Selected projects">
             {PROJECTS.map((p) => (
               <article key={p.title} className="card" data-reveal>
                 <div className="card-media">
@@ -438,7 +439,7 @@ export default function Home() {
                 )}
               </article>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 

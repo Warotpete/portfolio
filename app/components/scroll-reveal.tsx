@@ -6,6 +6,7 @@ import { useEffect } from "react";
 //   data-reveal="text" sweeps a paragraph in from top to bottom, line by line;
 //   data-reveal="image" fades and settles from a slight zoom.
 // - Children of a [data-stagger] container reveal one after another.
+// - Children of a [data-reveal-group] reveal together once the group is in view.
 // - [data-parallax="0.08"] elements drift at a slightly different speed.
 // Nothing is hidden until this runs, and it is skipped for reduced-motion users.
 export default function ScrollReveal() {
@@ -19,8 +20,14 @@ export default function ScrollReveal() {
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          entry.target.classList.add("is-in");
-          observer.unobserve(entry.target);
+          const target = entry.target as HTMLElement;
+          // a [data-reveal-group] reveals all its children together
+          if (target.hasAttribute("data-reveal-group")) {
+            target.querySelectorAll(":scope > [data-reveal]").forEach((el) => el.classList.add("is-in"));
+          } else {
+            target.classList.add("is-in");
+          }
+          observer.unobserve(target);
         }
       },
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
@@ -37,6 +44,13 @@ export default function ScrollReveal() {
         group.querySelectorAll<HTMLElement>(":scope > [data-reveal]").forEach((el, i) => {
           el.style.setProperty("--reveal-delay", `${i * step}ms`);
         });
+      });
+      // Groups (like the projects carousel) reveal as one, so cards that start
+      // off to the side are already visible when you scroll to them
+      document.querySelectorAll<HTMLElement>("[data-reveal-group]:not([data-reveal-watched])").forEach((group) => {
+        group.dataset.revealWatched = "";
+        group.querySelectorAll<HTMLElement>(":scope > [data-reveal]").forEach((el) => (el.dataset.revealWatched = ""));
+        observer.observe(group);
       });
       document.querySelectorAll<HTMLElement>("[data-reveal]:not([data-reveal-watched])").forEach((el) => {
         el.dataset.revealWatched = "";

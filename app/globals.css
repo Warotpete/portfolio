@@ -712,6 +712,108 @@ section[id] {
   aspect-ratio: 16 / 10;
 }
 
+/* Projects carousel (components/carousel.tsx): one row, three cards at a
+   time on desktop, scrolled with the arrows, swipe or trackpad */
+/* Phones: one row of cards with both arrows under it, right-aligned.
+   Wider screens: the arrows sit either side of the row, centred on the
+   card images (a card image is 4:5, so its middle is 62.5% of the card
+   width down). */
+.carousel {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas:
+    "track track track"
+    ". prev next";
+  gap: 2rem 0.75rem;
+  container-type: inline-size;
+}
+
+.carousel-track { grid-area: track; }
+.carousel-prev  { grid-area: prev; }
+.carousel-next  { grid-area: next; }
+
+@media (min-width: 640px) {
+  .carousel {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "prev track next";
+    gap: 0 1rem;
+    align-items: start;
+  }
+
+  /* row width is the carousel minus two 3rem arrows and two 1rem gaps */
+  .carousel-arrow {
+    margin-top: calc((100cqw - 8rem - 1.5rem) / 2 * 0.625 - 1.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-arrow {
+    margin-top: calc((100cqw - 8rem - 3rem) / 3 * 0.625 - 1.5rem);
+  }
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 82%;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  /* room for the card hover zoom without clipping */
+  padding-bottom: 0.25rem;
+}
+
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-track > * {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .carousel-track { grid-auto-columns: calc((100% - 1.5rem) / 2); }
+}
+
+@media (min-width: 1024px) {
+  .carousel-track { grid-auto-columns: calc((100% - 3rem) / 3); }
+}
+
+.carousel-arrow {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--black);
+  cursor: pointer;
+  transition: opacity 250ms ease;
+}
+
+.carousel-arrow svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  transition: transform 250ms ease;
+}
+
+/* the arrow nudges the way it points */
+.carousel-prev:hover:not(:disabled) svg { transform: translateX(-4px); }
+.carousel-next:hover:not(:disabled) svg { transform: translateX(4px); }
+
+.carousel-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { scroll-behavior: auto; }
+}
+
 /* placeholder cover for a project without a screenshot */
 .piece-placeholder {
   position: absolute;
